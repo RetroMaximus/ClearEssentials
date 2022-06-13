@@ -1,0 +1,52 @@
+#N canvas 433 238 1061 521 12;
+#X obj 252 325 adctomidi;
+#X msg 266 177 getthreshold;
+#X msg 266 202 getnoisefilter;
+#X msg 266 226 getmicinput;
+#X msg 267 250 gettoggle;
+#X obj 394 228 hsl 100 12 0.01 1 1 0 empty empty NoiseFilter 3 6 0
+10 #dfdfdf #00faff #000000 0 1;
+#X obj 393 186 hsl 100 12 0.01 1 0 0 empty empty Threshold 3 6 0 10
+#dfdfdf #00faff #000000 0 1;
+#X obj 393 144 hsl 100 12 0 1 0 0 empty empty Input\\\ Vol 3 6 0 10
+#dfdfdf #00faff #000000 0 1;
+#X obj 379 97 tgl 15 0 empty empty adctomidi\\\ status 17 7 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X msg 390 161 setmicinput \$1;
+#X msg 390 204 setthreshold \$1;
+#X msg 391 246 setnoisefilter \$1;
+#X obj 370 277 t a;
+#X msg 379 119 settoggle \$1;
+#X obj 312 352 print get_result;
+#X obj 252 399 print note;
+#X obj 336 307 adc~;
+#X obj 280 377 print note_and_message;
+#X text 11 34 Written By: Reg Finely;
+#X text 10 55 Aka Scr1ptAl1as;
+#X text 12 94 Pd 0.52.2;
+#X text 10 15 adctomidi v1.0;
+#X text 185 5 adctomidi recieves a frequency from the [adc] object
+and converts it to a midi note. The second inlet proves the midi note
+and on or off message as a list.;
+#X text 618 21 Note* Threshold is linear and is Noise filter is logarithmic.
+I am not the original writter of the sigmund portion of [adctomidi].
+More info inside the patch.;
+#X text 10 73 2022/06/8 11:17PM;
+#X connect 0 0 15 0;
+#X connect 0 1 17 0;
+#X connect 0 2 14 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 11 0;
+#X connect 6 0 10 0;
+#X connect 7 0 9 0;
+#X connect 8 0 13 0;
+#X connect 9 0 12 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;
+#X connect 13 0 12 0;
+#X connect 16 0 0 1;
+#X connect 16 1 0 1;
