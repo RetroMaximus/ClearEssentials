@@ -37,4 +37,4 @@ CE primary focus will be to provide a bit more of a graphical interface with cus
 A good example of this is the [vocadsr] object. A full gui is provided with option to set new values to all of the gui elements. While midi notes can still be recieved when [vocadsr] is not visible.
 
 Acknowledgements
-​ Special thanks the facebook group Pure Data and folks at https://forum.pdpatchrepo.info/ all of your answers over the years has given the confedense to start and compile this library.
+​ Special thanks the facebook group Pure Data and folks at https://forum.pdpatchrepo.info/ all of your answers over the years has given the confidence to start and compile this library.
