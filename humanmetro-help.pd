@@ -30,9 +30,9 @@
 #X msg 216 117 get_bar;
 #X msg 223 141 get_step;
 #X msg 230 165 get_tick;
-#X obj 36 130 loadbang;
-#X text 39 37 Written By: Reg Finely;
-#X text 38 58 Aka Scr1ptAl1as;
+#X obj 29 183 loadbang;
+#X text 28 64 Written By: Reg Finely;
+#X text 27 85 Aka Scr1ptAl1as;
 #X text 642 120 Swing \, Human and Mistakes is set from 0.01 to 1,
 f 48;
 #X obj 630 185 hsl 100 15 0.01 1 1 0 empty empty empty -2 -8 0 10 #fcfcfc
@@ -71,9 +71,9 @@ f 48;
 #X connect 6 3 5 0;
 #X connect 6 4 7 0;
 #X connect 7 0 10 0;
-#X restore 36 157 pd \$0-loadmetrodefaults;
-#X text 38 76 2022/05/11 8:54AM;
-#X text 38 18 HumanMetro v1.0;
+#X restore 29 210 pd \$0-loadmetrodefaults;
+#X text 27 103 2022/05/11 8:54AM;
+#X text 27 45 HumanMetro v1.0;
 #X text 763 166 Pro;
 #X text 824 166 Newbie;
 #X text 890 165 Less;
@@ -87,6 +87,8 @@ messages will work only when the metronome is playing. Others will
 work as soon as the message is sent.;
 #X msg 379 376 continue;
 #X obj 600 492 print got_timedivision_list;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
 #X connect 0 0 40 0;
 #X connect 1 0 40 0;
 #X connect 3 0 4 0;

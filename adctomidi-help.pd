@@ -32,6 +32,8 @@ and on or off message as a list.;
 I am not the original writter of the sigmund portion of [adctomidi].
 More info inside the patch.;
 #X text 10 73 2022/06/8 11:17PM;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
 #X connect 0 0 15 0;
 #X connect 0 1 17 0;
 #X connect 0 2 14 0;

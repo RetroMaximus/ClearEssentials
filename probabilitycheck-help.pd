@@ -10,10 +10,10 @@
 #X text 243 125 Greater than;
 #X text 252 173 Equale to;
 #X text 254 222 Multiple of;
-#X text 39 37 Written By: Reg Finely;
-#X text 38 58 Aka Scr1ptAl1as;
-#X text 38 18 Probability Check v1.0;
-#X text 38 76 2022/05/11 9:45PM;
+#X text 25 65 Written By: Reg Finely;
+#X text 24 86 Aka Scr1ptAl1as;
+#X text 24 46 Probability Check v1.0;
+#X text 24 104 2022/05/11 9:45PM;
 #X text 213 8 Probability check is a smal tool the check if the slider
 falls within the random bang range depending on the set comparison
 type.;
@@ -56,6 +56,8 @@ example must be set from 0 to 100;
 #X floatatom 382 472 5 0 0 0 - - - 0;
 #X msg 139 357 generate;
 #X msg 140 408 randomize;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
 #X connect 0 0 6 0;
 #X connect 0 1 50 0;
 #X connect 1 0 0 0;

@@ -1,21 +1,21 @@
-#N struct 5074-grapharray float x float x-space float color array graph
-5074-oscgraph;
-#N struct 5074-oscgraph float y;
-#N struct 5074-adsrenvarray float x float x-space float color array
-graph 5074-adsrgraph;
-#N struct 5074-adsrgraph float y;
-#N struct 5074-wavegrapharray float x float x-space float color array
-graph 5074-waveoscgraph;
-#N struct 5074-waveoscgraph float y;
-#N struct 5132-grapharray float x float x-space float color array graph
-5132-oscgraph;
-#N struct 5132-oscgraph float y;
-#N struct 5132-adsrenvarray float x float x-space float color array
-graph 5132-adsrgraph;
-#N struct 5132-adsrgraph float y;
-#N struct 5132-wavegrapharray float x float x-space float color array
-graph 5132-waveoscgraph;
-#N struct 5132-waveoscgraph float y;
+#N struct 3028-grapharray float x float x-space float color array graph
+3028-oscgraph;
+#N struct 3028-oscgraph float y;
+#N struct 3028-adsrenvarray float x float x-space float color array
+graph 3028-adsrgraph;
+#N struct 3028-adsrgraph float y;
+#N struct 3028-wavegrapharray float x float x-space float color array
+graph 3028-waveoscgraph;
+#N struct 3028-waveoscgraph float y;
+#N struct 3086-grapharray float x float x-space float color array graph
+3086-oscgraph;
+#N struct 3086-oscgraph float y;
+#N struct 3086-adsrenvarray float x float x-space float color array
+graph 3086-adsrgraph;
+#N struct 3086-adsrgraph float y;
+#N struct 3086-wavegrapharray float x float x-space float color array
+graph 3086-waveoscgraph;
+#N struct 3086-waveoscgraph float y;
 #N canvas 443 47 1103 705 12;
 #X obj 398 283 vocadsr, f 53;
 #X obj 399 477 dac~;
@@ -4542,7 +4542,7 @@ graph 5132-waveoscgraph;
 #X connect 8 0 7 0;
 #X connect 10 0 0 0;
 #X connect 11 0 10 0;
-#X restore 28 153 pd \$0-examplepatch;
+#X restore 30 189 pd \$0-examplepatch;
 #X obj 803 499 print played_midi_data;
 #X obj 398 256 t a;
 #N canvas 970 27 870 870 \$0-settingsmessages 0;
@@ -4745,6 +4745,8 @@ in the example patch.;
 #X text 639 99 FYI - You should know this. When shaping a custom wave
 table. Sq \, Tr \, Si \, Sa will remain highlighted. This means you
 are modeling after this osc type.;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
 #X connect 0 0 1 1;
 #X connect 0 0 1 0;
 #X connect 0 5 8 0;
