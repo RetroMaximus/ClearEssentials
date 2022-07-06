@@ -1,0 +1,24 @@
+#N canvas 419 138 1284 681 12;
+#X text 36 56 Written By: Reg Finely;
+#X text 35 77 Aka Scr1ptAl1as;
+#X text 37 116 Pd 0.52.2;
+#X obj 37 162 reportissue;
+#X obj 37 142 aboutexternal;
+#X text 10 320 Outlet(s);
+#X text 94 340 1 - Get results;
+#X text 35 94 2022/06/121 8:52AM;
+#X text 93 319 0 - [set float float \, get float<;
+#X text 94 360 2 - Next or previous bang;
+#X text 94 380 3 - total preset count;
+#X text 94 400 4 - currently selected;
+#X text 669 43 Note* Save and delete gui objects are intentionally
+not included in this object tho messages can be sent to do so.;
+#X text 10 210 Inlet(s);
+#X text 93 209 0 - setvalue settoggle setspeed setosctype;
+#X text 94 250 2 - required float assigned to wtable id.;
+#X text 94 230 1 - bang to save as preset;
+#X obj 632 320 ce_wavetablepresets;
+#X text 35 37 ce_waavetablepresets v1.0;
+#X text 235 25 [ce_wavetablepresets] is a selector tool to be used
+with objects susch as multivvsl or objects that can take a [set float
+float< message.;

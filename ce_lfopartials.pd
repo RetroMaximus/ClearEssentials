@@ -1,0 +1,101 @@
+#N canvas 156 156 1219 542 12;
+#X obj 100 100 cnv 15 500 155 empty empty Partials\\\ LFO's 3 12 0
+14 #606060 #ffffff 0;
+#X obj 666 493 outlet;
+#X msg 681 174 setslidervalue 0 \$1;
+#X floatatom 683 150 5 0 0 0 - - - 0;
+#X obj 157 122 lfopresets 20;
+#X floatatom 698 199 5 0 0 0 - - - 0;
+#X floatatom 709 249 5 0 0 0 - - - 0;
+#X floatatom 732 298 5 0 0 0 - - - 0;
+#X msg 696 223 setslidervalue 1 \$1;
+#X msg 707 271 setslidervalue 2 \$1;
+#X msg 731 323 setslidervalue 3 \$1;
+#X floatatom 744 349 5 0 0 0 - - - 0;
+#X msg 743 374 setslidervalue 4 \$1;
+#X floatatom 754 402 5 0 0 0 - - - 0;
+#X msg 753 427 setslidervalue 5 \$1;
+#X obj 157 145 lfopresets 21;
+#X obj 157 167 lfopresets 22;
+#X obj 157 190 lfopresets 23;
+#X obj 157 213 lfopresets 24;
+#X obj 157 235 lfopresets 25;
+#X obj 404 122 lfopresets 26;
+#X floatatom 902 152 5 0 0 0 - - - 0;
+#X floatatom 917 201 5 0 0 0 - - - 0;
+#X floatatom 928 251 5 0 0 0 - - - 0;
+#X floatatom 951 300 5 0 0 0 - - - 0;
+#X floatatom 963 351 5 0 0 0 - - - 0;
+#X floatatom 973 404 5 0 0 0 - - - 0;
+#X msg 900 176 setslidervalue 6 \$1;
+#X msg 915 225 setslidervalue 7 \$1;
+#X msg 926 273 setslidervalue 8 \$1;
+#X msg 950 325 setslidervalue 9 \$1;
+#X msg 962 376 setslidervalue 10 \$1;
+#X msg 972 429 setslidervalue 11 \$1;
+#X obj 404 145 lfopresets 27;
+#X obj 404 167 lfopresets 28;
+#X obj 404 190 lfopresets 29;
+#X obj 404 212 lfopresets 30;
+#X obj 404 234 lfopresets 31;
+#X obj 125 123 cnv 15 16 16 empty empty 1 3 8 0 14 #606060 #000000
+0;
+#X obj 125 145 cnv 15 16 16 empty empty 2 3 8 0 14 #606060 #000000
+0;
+#X obj 125 168 cnv 15 16 16 empty empty 3 3 8 0 14 #606060 #000000
+0;
+#X obj 125 190 cnv 15 16 16 empty empty 4 3 8 0 14 #606060 #000000
+0;
+#X obj 125 212 cnv 15 16 16 empty empty 5 3 8 0 14 #606060 #000000
+0;
+#X obj 125 234 cnv 15 16 16 empty empty 6 3 8 0 14 #606060 #000000
+0;
+#X obj 370 123 cnv 15 16 16 empty empty 7 3 8 0 14 #606060 #000000
+0;
+#X obj 370 145 cnv 15 16 16 empty empty 8 3 8 0 14 #606060 #000000
+0;
+#X obj 370 168 cnv 15 16 16 empty empty 9 3 8 0 14 #606060 #000000
+0;
+#X obj 370 190 cnv 15 16 16 empty empty 10 3 8 0 14 #606060 #000000
+0;
+#X obj 370 212 cnv 15 16 16 empty empty 11 3 8 0 14 #606060 #000000
+0;
+#X obj 370 234 cnv 15 16 16 empty empty 12 3 8 0 14 #606060 #000000
+0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 2 3 0;
+#X connect 5 0 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 10 0;
+#X connect 8 0 1 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X connect 11 0 12 0;
+#X connect 12 0 1 0;
+#X connect 13 0 14 0;
+#X connect 14 0 1 0;
+#X connect 15 2 5 0;
+#X connect 16 2 6 0;
+#X connect 17 2 7 0;
+#X connect 18 2 11 0;
+#X connect 19 2 13 0;
+#X connect 20 2 21 0;
+#X connect 21 0 27 0;
+#X connect 22 0 28 0;
+#X connect 23 0 29 0;
+#X connect 24 0 30 0;
+#X connect 25 0 31 0;
+#X connect 26 0 32 0;
+#X connect 27 0 1 0;
+#X connect 28 0 1 0;
+#X connect 29 0 1 0;
+#X connect 30 0 1 0;
+#X connect 31 0 1 0;
+#X connect 32 0 1 0;
+#X connect 33 2 22 0;
+#X connect 34 2 23 0;
+#X connect 35 2 24 0;
+#X connect 36 2 25 0;
+#X connect 37 2 26 0;
+#X coords 0 -1 1 1 500 155 2 100 100;

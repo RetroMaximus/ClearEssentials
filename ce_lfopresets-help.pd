@@ -1,0 +1,39 @@
+#N canvas -1 4 1106 541 12;
+#X text 36 56 Written By: Reg Finely;
+#X text 35 77 Aka Scr1ptAl1as;
+#X text 37 116 Pd 0.52.2;
+#X obj 37 162 reportissue;
+#X obj 37 142 aboutexternal;
+#X text 35 37 lfopresets v1.0;
+#X text 209 27 [lfopresets] is a small lfo controller that is used
+with [ce_customarray];
+#X text 35 94 2022/06/16 3:56AM;
+#X text 643 43 Note* For example this lfo object can be used to modify
+partials for the sliders in [ce_customarray] object as show in the
+example.;
+#X obj 631 426 print get_result;
+#X msg 403 250 get_osctype;
+#X msg 422 348 get_speed;
+#X msg 413 299 get_startvalue;
+#X msg 388 199 get_toggle;
+#X msg 380 152 get_value;
+#X msg 379 126 setvalue 0 1;
+#X msg 385 176 settoggle 0;
+#X msg 396 225 setosctype 0;
+#X msg 411 276 setstartvalue 0;
+#X msg 420 325 setspeed 0.5;
+#X text 10 320 Outlet(s);
+#X text 93 319 0 - LFO value;
+#X text 94 340 1 - Get results;
+#X obj 413 401 ce_lfopresets;
+#X connect 10 0 23 0;
+#X connect 11 0 23 0;
+#X connect 12 0 23 0;
+#X connect 13 0 23 0;
+#X connect 14 0 23 0;
+#X connect 15 0 23 0;
+#X connect 16 0 23 0;
+#X connect 17 0 23 0;
+#X connect 18 0 23 0;
+#X connect 19 0 23 0;
+#X connect 23 4 9 0;

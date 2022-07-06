@@ -1,0 +1,23 @@
+#N struct 2289-grapharray float x float x-space float color array graph
+2289-oscgraph;
+#N struct 2289-oscgraph float y;
+#N canvas 735 203 790 563 12;
+#X text 27 46 Written By: Reg Finely;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X obj 223 256 ce_oscdisplay;
+#X msg 226 172 inputmidi;
+#X msg 248 224 setoscarray;
+#X text 26 27 ce_oscdisplay v1.0;
+#X text 194 13 Display's the active osc voice in this window.;
+#X text 26 85 2022/07/03 4:50PM;
+#X msg 238 199 setmidistate 0;
+#X text 10 320 Outlet(s);
+#X text 95 320 0 - Array signal;
+#X text 94 358 2 - Midi note released;
+#X text 94 338 1 - bang when array changed;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 11 0 5 0;

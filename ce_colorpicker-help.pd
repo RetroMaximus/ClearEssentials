@@ -1,0 +1,42 @@
+#N canvas 271 6 1125 477 12;
+#X obj 532 309 ce_colorpicker;
+#X msg 539 281 setcolor 2;
+#X msg 515 253 randomize;
+#X obj 516 227 loadbang;
+#X text 27 46 Written By: Reg Finely;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 26 27 ce_colorpicker v1.0;
+#X text 26 85 2022/06/2 4:33 AM;
+#X text 201 17 [ce_colorpicker] is a small color picker with multipul
+output formats ready to be used to set the background or forground
+of objects.;
+#X text 634 33 Note *In the event that red or green is choosen the
+opposite will go through the last outlet to be used for setting the
+foreground color of a object. Known as the "active" forground color.
+;
+#X text 94 239 0;
+#X text 129 239 setcolor;
+#X text 128 259 randomize;
+#X text 94 340 1 - Color message in 1 argument format;
+#X text 93 319 0 - Color in as float;
+#X text 94 360 2 - Color message in 3 argument format;
+#X text 94 380 3 - RGB colors reduced to a single float.;
+#X text 94 400 4 - Active forground color;
+#X text 15 239 Inlet(s);
+#X text 10 320 Outlet(s);
+#X obj 506 424 print x0;
+#X obj 534 402 print x1;
+#X obj 560 379 print x2;
+#X obj 587 355 print x3;
+#X obj 610 333 print x4;
+#X connect 0 0 23 0;
+#X connect 0 1 24 0;
+#X connect 0 2 25 0;
+#X connect 0 3 26 0;
+#X connect 0 4 27 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
