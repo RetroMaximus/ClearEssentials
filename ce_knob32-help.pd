@@ -1,0 +1,82 @@
+#N struct 1111-g1 float x float y float q float lw float lc float fc
+float plc float pc float bgc;
+#N struct 1113-g1 float x float y float q float lw float lc float fc
+float plc float pc float bgc;
+#N struct 1118-g1 float x float y float q float lw float lc float fc
+float plc float pc float bgc;
+#N canvas 589 120 1078 701 12;
+#X obj 290 665 print;
+#X obj 395 546 ce_knob64;
+#X obj 491 528 ce_knob100;
+#X obj 395 623 print, f 6;
+#X obj 491 637 print;
+#X text 21 49 Written By: Reg Finely;
+#X text 20 70 Aka Scr1ptAl1as;
+#X text 22 109 Pd 0.52.2;
+#X obj 22 155 reportissue;
+#X obj 22 135 aboutexternal;
+#X text 194 61 [ce_knob32];
+#X text 290 61 [ce_knob64];
+#X text 389 61 [ce_knob100];
+#X text 194 89 Currently sizes can not be adjusted "live" or on the
+fly.;
+#X text 195 178 Overlay images are named with this syntax from 0 to
+10;
+#X text 208 209 value-0-32.gif;
+#X text 208 231 value-1-32.gif;
+#X text 208 251 value-2-32.gif;
+#X text 321 206 value-0-64.gif;
+#X text 321 228 value-1-64.gif;
+#X text 321 248 value-2-64.gif;
+#X text 209 268 ect...;
+#X text 321 268 ect...;
+#X text 443 271 ect...;
+#X text 443 209 value-0-100.gif;
+#X text 443 231 value-1-100.gif;
+#X text 443 251 value-2-100.gif;
+#X text 196 123 [ce_knob] works with a hidden vslider that updates
+a overlay image based on its current value for each value change of
+the vslider.;
+#X text 20 88 2022/06/26 11:02PM;
+#X text 628 36 Note* open value-0-32.gif \, value-0-64.gif or value-0-100.gif
+in your favorite image editor to see how the overlay is designed.;
+#X text 638 93 Backup images are located in:;
+#X text 635 112 "clearessentials/images/";
+#X text 20 30 ce_knob32 v1.0;
+#X text 195 20 ce_knob32 is forced to one of 3 sizes 32px 64px and
+100px each is created with te syntax below.;
+#X text 635 134 While the value looks like it only snaps to whole nubmers
+decimal values are in fact sent to the outlet.;
+#X text 320 310 999 = white;
+#X msg 332 352 setfgcolor 200;
+#X msg 336 404 setlinewidth 4;
+#X msg 337 378 setlinecolor 30;
+#X msg 341 427 setmin 2;
+#X msg 347 450 setmax 6;
+#X obj 498 395 ce_colorpicker;
+#X msg 558 410 setbgcolor \$1;
+#X msg 320 329 setbgcolor 999;
+#X text 556 429 A random color is chossen automaticly when ce_knob
+is first loaded. To set a desired color use ths message to force a
+color change.;
+#X obj 499 348 loadbang;
+#X msg 498 371 setcolor 5;
+#X text 586 370 0 - 7;
+#X text 209 569 [ce_knob32];
+#X text 384 527 [ce_knob64];
+#X text 598 568 [ce_knob100];
+#X text 590 391 4th outlet of [ce_colorpicker] gives rgb color float
+;
+#X obj 297 555 ce_knob32;
+#X msg 293 516 bang;
+#X msg 218 474 setsize 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 41 3 42 0;
+#X connect 42 0 2 0;
+#X connect 45 0 46 0;
+#X connect 46 0 41 0;
+#X connect 52 0 0 0;
+#X connect 53 0 52 0;
+#X connect 54 0 52 0;
+#X coords 0 701 1 700 32 32 0;

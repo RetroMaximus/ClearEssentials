@@ -1,0 +1,55 @@
+#N struct 1732-g1 float x float y float q float lw float lc float fc
+float plc float pc;
+#N struct 1733-g1 float x float y float q float lw float lc float fc
+float plc float pc;
+#N struct 1736-g1 float x float y float q float lw float lc float fc
+float plc float pc;
+#N canvas 641 174 1124 517 12;
+#X obj 436 428 print;
+#X obj 528 365 ce_knob64;
+#X obj 624 347 ce_knob100;
+#X text 638 322 ce_knob100;
+#X text 525 335 ce_knob64;
+#X text 417 352 ce_knob32;
+#X obj 528 442 print, f 6;
+#X obj 624 456 print;
+#X text 39 51 Written By: Reg Finely;
+#X text 38 72 Aka Scr1ptAl1as;
+#X text 40 111 Pd 0.52.2;
+#X obj 40 157 reportissue;
+#X obj 40 137 aboutexternal;
+#X text 212 63 [ce_knob32];
+#X text 308 63 [ce_knob64];
+#X text 407 63 [ce_knob100];
+#X text 212 91 Currently sizes can not be adjusted "live" or on the
+fly.;
+#X text 213 180 Overlay images are named with this syntax from 0 to
+10;
+#X text 226 211 value-0-32.gif;
+#X text 226 233 value-1-32.gif;
+#X text 226 253 value-2-32.gif;
+#X text 339 208 value-0-64.gif;
+#X text 339 230 value-1-64.gif;
+#X text 339 250 value-2-64.gif;
+#X text 227 270 ect...;
+#X text 339 270 ect...;
+#X text 461 273 ect...;
+#X text 461 211 value-0-100.gif;
+#X text 461 233 value-1-100.gif;
+#X text 461 253 value-2-100.gif;
+#X text 38 90 2022/06/26 11:02PM;
+#X text 646 38 Note* open value-0-32.gif \, value-0-64.gif or value-0-100.gif
+in your favorite image editor to see how the overlay is designed.;
+#X text 656 95 Backup images are located in:;
+#X text 653 114 "clearessentials/images/";
+#X text 212 20 ce_knob64 is forced to one of 3 sizes 32px 64px and
+100px each is created with te syntax below.;
+#X text 214 125 [ce_knob64] works with a hidden vslider that updates
+a overlay image based on its current value for each value change of
+the vslider.;
+#X text 38 32 ce_knob64 v1.0;
+#X obj 436 382 ce_knob32;
+#X connect 1 0 6 0;
+#X connect 2 0 7 0;
+#X connect 37 0 0 0;
+#X coords 0 517 1 516 32 32 0;

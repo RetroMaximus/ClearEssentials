@@ -1,0 +1,36 @@
+#N canvas 614 119 762 538 12;
+#X text 27 46 Written By: Reg Finely;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 96 234 0;
+#X text 17 234 Inlet(s);
+#X text 10 430 Outlet(s);
+#X obj 440 268 ce_bankselector;
+#X floatatom 454 242 5 0 16 0 - - - 0;
+#X floatatom 525 353 5 0 0 0 - - - 0;
+#X listbox 440 354 5 0 0 0 - - - 0;
+#X floatatom 482 353 5 0 0 0 - - - 0;
+#X msg 428 168 bang;
+#X msg 444 217 set_bank 2;
+#X msg 436 191 set_perbank 16;
+#X text 115 232 bang;
+#X text 117 250 set_perbank float;
+#X text 117 270 setbank float;
+#X text 118 291 float;
+#X text 93 429 0~ - Bank Letter;
+#X text 94 450 1 - Bank Value;
+#X text 94 470 2~ - Selected item;
+#X text 201 17 [ce_bankselector] is a small external that outlets a
+selected index based on the chosen bank multiplied by total items per
+bank.;
+#X text 26 27 ce_bankselector v1.0;
+#X text 26 85 2022/07/17 5:11PM;
+#X connect 8 0 11 0;
+#X connect 8 1 12 0;
+#X connect 8 2 10 0;
+#X connect 9 0 8 0;
+#X connect 13 0 8 0;
+#X connect 14 0 8 0;
+#X connect 15 0 8 0;

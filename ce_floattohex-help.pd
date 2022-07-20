@@ -1,0 +1,33 @@
+#N canvas 144 102 1064 420 12;
+#X listbox 424 257 20 0 0 0 - - - 0;
+#X floatatom 422 188 5 0 10000 0 - - - 0;
+#X obj 423 209 t f;
+#X obj 424 232 ce_floattohex;
+#X text 28 46 Written By: Reg Finely;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 94 239 0;
+#X text 15 239 Inlet(s);
+#X text 10 320 Outlet(s);
+#X text 129 239 float;
+#X text 93 319 0 - Hex Value;
+#X text 26 27 ce_floattohex v1.0;
+#X text 201 17 [ce_floattohex] is a small tool to convert a float to
+a hex value.;
+#X text 26 85 2022/07/12 4:05 PM;
+#X obj 424 282 print;
+#X msg 477 174 setmin 0;
+#X msg 474 205 setmax 100;
+#X msg 421 165 0;
+#X text 632 11 Note * Currently the maximum readable numer is the Default
+range 0 to 10000 Can be set to something smaller but not larger the
+10000;
+#X connect 0 0 17 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 18 0 3 0;
+#X connect 19 0 3 0;
+#X connect 20 0 1 0;
