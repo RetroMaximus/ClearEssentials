@@ -1,4 +1,4 @@
-#N canvas 377 50 790 359 12;
+#N canvas 307 96 790 388 12;
 #X text 28 46 Written By: Reg Finely;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
@@ -9,16 +9,11 @@
 #X text 10 320 Outlet(s);
 #X text 129 239 float;
 #X text 93 319 0 - Hex Value;
-#X text 26 27 ce_floattohex v1.0;
-#X text 203 12 [ce_floattohex] is a small tool to convert a float to
-a hex value.;
 #X text 26 85 2022/07/12 4:05 PM;
 #X obj 254 240 ce_hextofloat;
 #X floatatom 254 266 13 0 0 0 - - - 0;
-#X text 251 322 If hex is converted correctly these print messages
-should match values;
 #X obj 254 290 print out-float;
-#N canvas 26 26 450 341 \$0-example 1;
+#N canvas 723 396 450 341 \$0-example 1;
 #X obj 173 131 ce_hextofloat;
 #X obj 164 93 ce_floattohex;
 #X floatatom 164 69 5 0 0 0 - - - 0;
@@ -47,16 +42,19 @@ flag in front of the value.;
 #X msg 380 173 symbol FAC312ACE;
 #X text 514 199 caclulate a ten digit hex value;
 #X msg 379 199 symbol EFFEFFFFFF;
-#X connect 13 0 14 0;
-#X connect 14 0 16 0;
-#X connect 18 0 13 0;
-#X connect 19 0 13 0;
-#X connect 20 0 13 0;
-#X connect 22 0 13 0;
-#X connect 23 0 13 0;
-#X connect 24 0 13 0;
-#X connect 25 0 13 0;
-#X connect 26 0 13 0;
-#X connect 27 0 13 0;
-#X connect 28 0 13 0;
-#X connect 30 0 13 0;
+#X text 26 27 ce_hextofloat v1.0;
+#X text 203 12 [ce_hextofloat] is a small tool to convert a hex to
+a float.;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 15 0 11 0;
+#X connect 16 0 11 0;
+#X connect 17 0 11 0;
+#X connect 19 0 11 0;
+#X connect 20 0 11 0;
+#X connect 21 0 11 0;
+#X connect 22 0 11 0;
+#X connect 23 0 11 0;
+#X connect 24 0 11 0;
+#X connect 25 0 11 0;
+#X connect 27 0 11 0;
