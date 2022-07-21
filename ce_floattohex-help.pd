@@ -1,8 +1,7 @@
 #N canvas 144 102 1064 420 12;
-#X listbox 424 257 20 0 0 0 - - - 0;
-#X floatatom 422 188 5 0 10000 0 - - - 0;
-#X obj 423 209 t f;
-#X obj 424 232 ce_floattohex;
+#X floatatom 439 217 5 0 0 0 - - - 0;
+#X obj 440 238 t f;
+#X obj 488 284 ce_floattohex;
 #X text 28 46 Written By: Reg Finely;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
@@ -17,17 +16,32 @@
 #X text 201 17 [ce_floattohex] is a small tool to convert a float to
 a hex value.;
 #X text 26 85 2022/07/12 4:05 PM;
-#X obj 424 282 print;
-#X msg 477 174 setmin 0;
-#X msg 474 205 setmax 100;
-#X msg 421 165 0;
-#X text 632 11 Note * Currently the maximum readable numer is the Default
-range 0 to 10000 Can be set to something smaller but not larger the
-10000;
-#X connect 0 0 17 0;
+#X obj 488 334 print;
+#X msg 524 235 setmin 0;
+#X msg 524 260 setmax 100;
+#X msg 461 87 0;
+#X msg 460 136 10000;
+#X symbolatom 496 310 10 0 0 0 - - - 0;
+#X msg 460 113 5000;
+#X msg 459 186 3.744e+06;
+#X text 520 186 << calculates to a six digit hex;
+#X msg 523 210 set_digitlimit 6;
+#X text 648 206 Default digit limit is set to 3 Regardless of the end
+result only the amount of digits assigned are returned.;
+#X text 232 133 Click these test values>>;
+#X text 632 11 Note * Default digit limit is set to 3 Regardless of
+the end result only the amount of digits assigned are returned. Maximum
+calculated result can be up to a ten digit hex value.;
+#X msg 462 161 9e+06;
+#X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X connect 3 0 0 0;
-#X connect 18 0 3 0;
-#X connect 19 0 3 0;
-#X connect 20 0 1 0;
+#X connect 2 0 16 0;
+#X connect 2 0 21 0;
+#X connect 17 0 2 0;
+#X connect 18 0 2 0;
+#X connect 19 0 0 0;
+#X connect 20 0 0 0;
+#X connect 22 0 0 0;
+#X connect 23 0 0 0;
+#X connect 25 0 2 0;
+#X connect 29 0 0 0;
