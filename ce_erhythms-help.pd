@@ -1,0 +1,23 @@
+#N canvas 699 0 895 978 12;
+#X obj 261 149 ce_erhythms;
+#X msg 259 120 inputmidi \$1;
+#X msg 263 927 inputmidi \$1;
+#X msg 247 97 allstop;
+#X msg 235 72 randomall;
+#X msg 220 48 set_release \$1;
+#X text 10 55 Aka Scr1ptAl1as;
+#X text 12 94 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 618 21 Note* Take advantage of [ce_erhythms] which is 10 pre
+coded [ce_ecluistack]'s. Also it takes up a bit of gui space.;
+#X text 10 15 ce_erhythms v1.0;
+#X text 185 5 ce_erhythms is a stack of 10 [ce_eculistack] objects.
+;
+#X text 10 73 2022/08/9 11:38AM;
+#X text 11 34 Written By: Reg Finley;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;

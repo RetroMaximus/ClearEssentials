@@ -1,5 +1,5 @@
 #N canvas 307 96 790 388 12;
-#X text 28 46 Written By: Reg Finely;
+#X text 28 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
 #X obj 28 152 reportissue;
@@ -14,19 +14,21 @@
 #X floatatom 254 266 13 0 0 0 - - - 0;
 #X obj 254 290 print out-float;
 #N canvas 723 396 450 341 \$0-example 1;
-#X obj 173 131 ce_hextofloat;
-#X obj 164 93 ce_floattohex;
-#X floatatom 164 69 5 0 0 0 - - - 0;
-#X floatatom 173 157 5 0 0 0 - - - 0;
-#X obj 173 181 print out-float;
-#X obj 131 209 print in-float;
+#X obj 171 124 ce_hextofloat;
+#X obj 171 68 ce_floattohex;
+#X floatatom 171 44 4 0 0 0 - - - 0;
+#X floatatom 171 150 5 0 0 0 - - - 0;
+#X obj 171 174 print out-float;
+#X obj 158 198 print in-float;
 #X text 31 238 If hex is converted correctly these print messages should
 match values;
+#X listbox 171 99 13 0 0 0 Hex - - 0;
 #X connect 0 0 3 0;
-#X connect 1 0 0 0;
+#X connect 1 0 7 0;
 #X connect 2 0 1 0;
 #X connect 2 0 5 0;
 #X connect 3 0 4 0;
+#X connect 7 0 0 0;
 #X restore 27 184 pd \$0-example;
 #X msg 271 88 symbol C8;
 #X msg 270 112 symbol FF1;

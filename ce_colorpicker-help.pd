@@ -3,7 +3,6 @@
 #X msg 539 281 setcolor 2;
 #X msg 515 253 randomize;
 #X obj 516 227 loadbang;
-#X text 27 46 Written By: Reg Finely;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
 #X obj 28 152 reportissue;
@@ -32,11 +31,12 @@ foreground color of a object. Known as the "active" forground color.
 #X obj 560 379 print x2;
 #X obj 587 355 print x3;
 #X obj 610 333 print x4;
-#X connect 0 0 23 0;
-#X connect 0 1 24 0;
-#X connect 0 2 25 0;
-#X connect 0 3 26 0;
-#X connect 0 4 27 0;
+#X text 27 46 Written By: Reg Finley;
+#X connect 0 0 22 0;
+#X connect 0 1 23 0;
+#X connect 0 2 24 0;
+#X connect 0 3 25 0;
+#X connect 0 4 26 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;

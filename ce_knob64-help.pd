@@ -13,7 +13,7 @@ float plc float pc;
 #X text 417 352 ce_knob32;
 #X obj 528 442 print, f 6;
 #X obj 624 456 print;
-#X text 39 51 Written By: Reg Finely;
+#X text 39 51 Written By: Reg Finley;
 #X text 38 72 Aka Scr1ptAl1as;
 #X text 40 111 Pd 0.52.2;
 #X obj 40 157 reportissue;

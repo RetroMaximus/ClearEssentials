@@ -21,7 +21,6 @@
 #X obj 252 399 print note;
 #X obj 336 307 adc~;
 #X obj 280 377 print note_and_message;
-#X text 11 34 Written By: Reg Finely;
 #X text 10 55 Aka Scr1ptAl1as;
 #X text 12 94 Pd 0.52.2;
 #X text 10 15 adctomidi v1.0;
@@ -34,6 +33,7 @@ More info inside the patch.;
 #X text 10 73 2022/06/8 11:17PM;
 #X obj 28 152 reportissue;
 #X obj 28 132 aboutexternal;
+#X text 11 34 Written By: Reg Finley;
 #X connect 0 0 15 0;
 #X connect 0 1 17 0;
 #X connect 0 2 14 0;

@@ -1,5 +1,5 @@
 #N canvas 735 203 790 563 12;
-#X text 27 46 Written By: Reg Finely;
+#X text 27 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
 #X obj 28 152 reportissue;

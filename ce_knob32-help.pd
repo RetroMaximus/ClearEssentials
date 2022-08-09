@@ -10,7 +10,7 @@ float plc float pc float bgc;
 #X obj 491 528 ce_knob100;
 #X obj 395 623 print, f 6;
 #X obj 491 637 print;
-#X text 21 49 Written By: Reg Finely;
+#X text 21 49 Written By: Reg Finley;
 #X text 20 70 Aka Scr1ptAl1as;
 #X text 22 109 Pd 0.52.2;
 #X obj 22 155 reportissue;

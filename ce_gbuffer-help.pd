@@ -1,6 +1,6 @@
 #N canvas 1528 670 1189 616 12;
 #X obj 345 235 ce_gbuffer;
-#X text 36 56 Written By: Reg Finely;
+#X text 36 56 Written By: Reg Finley;
 #X text 35 77 Aka Scr1ptAl1as;
 #X text 37 116 Pd 0.52.2;
 #X obj 37 162 reportissue;

@@ -31,7 +31,7 @@
 #X msg 223 141 get_step;
 #X msg 230 165 get_tick;
 #X obj 29 183 loadbang;
-#X text 28 64 Written By: Reg Finely;
+#X text 28 64 Written By: Reg Finley;
 #X text 27 85 Aka Scr1ptAl1as;
 #X text 642 120 Swing \, Human and Mistakes is set from 0.01 to 1,
 f 48;

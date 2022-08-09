@@ -1,33 +1,32 @@
-#N struct 3028-grapharray float x float x-space float color array graph
-3028-oscgraph;
-#N struct 3028-oscgraph float y;
-#N struct 3028-adsrenvarray float x float x-space float color array
-graph 3028-adsrgraph;
-#N struct 3028-adsrgraph float y;
-#N struct 3028-wavegrapharray float x float x-space float color array
-graph 3028-waveoscgraph;
-#N struct 3028-waveoscgraph float y;
-#N struct 3086-grapharray float x float x-space float color array graph
-3086-oscgraph;
-#N struct 3086-oscgraph float y;
-#N struct 3086-adsrenvarray float x float x-space float color array
-graph 3086-adsrgraph;
-#N struct 3086-adsrgraph float y;
-#N struct 3086-wavegrapharray float x float x-space float color array
-graph 3086-waveoscgraph;
-#N struct 3086-waveoscgraph float y;
-#N canvas 443 47 1103 705 12;
+#N struct 1234-grapharray float x float x-space float color array graph
+1234-oscgraph;
+#N struct 1234-oscgraph float y;
+#N struct 1234-adsrenvarray float x float x-space float color array
+graph 1234-adsrgraph;
+#N struct 1234-adsrgraph float y;
+#N struct 1234-wavegrapharray float x float x-space float color array
+graph 1234-waveoscgraph;
+#N struct 1234-waveoscgraph float y;
+#N struct 1395-grapharray float x float x-space float color array graph
+1395-oscgraph;
+#N struct 1395-oscgraph float y;
+#N struct 1395-adsrenvarray float x float x-space float color array
+graph 1395-adsrgraph;
+#N struct 1395-adsrgraph float y;
+#N struct 1395-wavegrapharray float x float x-space float color array
+graph 1395-waveoscgraph;
+#N struct 1395-waveoscgraph float y;
+#N canvas 582 63 1208 705 12;
 #X obj 398 283 vocadsr, f 53;
-#X obj 399 477 dac~;
-#X text 27 46 Written By: Reg Finely;
+#X text 27 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 26 85 2022/06/2 9:37PM;
-#X obj 884 473 print get_result;
+#X obj 1102 600 print get_result;
 #X text 28 106 Pd 0.52.2;
 #N canvas 235 167 1102 573 \$0-examplepatch 0;
-#X obj 313 113 vocadsr, f 39;
-#X obj 558 383 tabwrite~ \$0-testadsrarray;
-#X obj 394 331 tabwrite~ \$0-testoscarray;
+#X obj 314 111 vocadsr, f 39;
+#X obj 720 487 tabwrite~ \$0-testadsrarray;
+#X obj 518 438 tabwrite~ \$0-testoscarray;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-testadsrarray 55125 float 1;
 #A 0 0.999919 0.999837 0.999756 0.999675 0.999593 0.999512 0.999431
@@ -3622,7 +3621,7 @@ graph 3086-waveoscgraph;
 0.206537 0.206488 0.206439 0.20639 0.206342 0.206293 0.206244 0.206195
 0.206146 0.206098 0.206049 0.206 0.205951 0.205903 0.205854 0.205805
 0.205756 0.205707 0.205659 0.20561 0.205561 0.205512 0.205463 0.205415
-0.205366 0.205317 0.205268 0.20522 0.205171 0.205122 0.205073 0.205024
+0.205366 0.205317 0.205268 0.20522 0.204871 0.204822 0.205073 0.205024
 0.204976 0.204927 0.204878 0.204829 0.204781 0.204732 0.204683 0.204634
 0.204585 0.204537 0.204488 0.204439 0.20439 0.204342 0.204293 0.204244
 0.204195 0.204146 0.204098 0.204049 0.204 0.203951 0.203902 0.203854
@@ -4327,10 +4326,9 @@ graph 3086-waveoscgraph;
 -0.0205681 -0.0188122;
 #X coords 0 1 99 -1 200 140 1 0 0;
 #X restore 64 64 graph;
-#X obj 314 306 dac~;
-#X obj 463 305 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 587 412 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 615 360 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 777 464 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 226 584 450 300 \$0-resizeandnormalizearrays 0;
 #X msg 79 220 \; \$2-testadsrarray normalize;
@@ -4350,8 +4348,8 @@ graph 3086-waveoscgraph;
 #X connect 6 1 5 0;
 #X connect 7 0 8 0;
 #X connect 8 0 2 1;
-#X restore 637 343 pd \$0-resizeandnormalizearrays;
-#X obj 795 295 print get_result;
+#X restore 823 444 pd \$0-resizeandnormalizearrays;
+#X obj 1027 399 print get_result;
 #X obj 314 83 t a;
 #N canvas 291 75 1070 815 \$0-settingsmessages 0;
 #X obj 297 772 outlet;
@@ -4528,22 +4526,23 @@ graph 3086-waveoscgraph;
 #X connect 97 0 0 0;
 #X connect 98 0 0 0;
 #X restore 312 59 pd \$0-settingsmessages;
-#X obj 671 317 print played_midi_data;
-#X connect 0 0 5 1;
-#X connect 0 0 5 0;
-#X connect 0 1 2 0;
-#X connect 0 2 6 0;
-#X connect 0 3 1 0;
-#X connect 0 4 8 0;
-#X connect 0 5 12 0;
-#X connect 0 6 9 0;
-#X connect 6 0 2 0;
-#X connect 7 0 1 0;
-#X connect 8 0 7 0;
-#X connect 10 0 0 0;
-#X connect 11 0 10 0;
+#X obj 926 421 print played_midi_data;
+#X obj 341 413 dac~ 1 2;
+#X connect 0 0 12 0;
+#X connect 0 1 12 1;
+#X connect 0 2 2 0;
+#X connect 0 3 5 0;
+#X connect 0 4 1 0;
+#X connect 0 5 7 0;
+#X connect 0 6 11 0;
+#X connect 0 7 8 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 9 0 0 0;
+#X connect 10 0 9 0;
 #X restore 30 189 pd \$0-examplepatch;
-#X obj 803 499 print played_midi_data;
+#X obj 996 631 print played_midi_data;
 #X obj 398 256 t a;
 #N canvas 970 27 870 870 \$0-settingsmessages 0;
 #X obj 363 769 outlet;
@@ -4615,18 +4614,16 @@ graph 3086-waveoscgraph;
 #X msg 700 325 getphase;
 #X text 85 550 LFO toggles 0 - 5 top to bottom;
 #X msg 89 530 setlfotoggle 4 0;
-#X msg 133 218 setband 0.5;
-#X msg 134 267 setdetune 0;
-#X msg 134 243 setdrive 0.2;
-#X msg 134 315 setcutoff 0.1;
-#X msg 134 338 setres 0.3;
+#X msg 133 178 setband 0.5;
+#X msg 134 227 setdetune 0;
+#X msg 134 275 setcutoff 0.1;
 #X msg 152 418 setpwmlfo 1;
 #X msg 152 441 setphaselfo 3.5;
 #X msg 153 466 setdrivelfo 1.5;
 #X msg 152 489 setdetunelfo 1.5;
 #X msg 152 370 setcutofflfo 1;
 #X msg 153 394 setreslfo 2.5;
-#X msg 134 291 setmix 0.05;
+#X msg 134 251 setmix 0.05;
 #X msg 704 637 getdetunelfo;
 #X msg 702 563 getdrivelfo;
 #X msg 703 590 getphaselfo;
@@ -4644,17 +4641,16 @@ graph 3086-waveoscgraph;
 ;
 #X msg 381 608 setthreshold \$1;
 #X msg 381 630 setnoisefilter \$1;
-#X msg 382 681 setlyrisynthtoggle 1;
-#X msg 383 700 setpan \$1;
 #X msg 432 745 setpantoggle \$1;
 #X obj 432 727 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 386 657 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
 #X msg 566 101 0.9;
-#X obj 333 35 t b b b b b b b b b b b b b b;
-#X msg 355 533 setband 9000;
 #X msg 362 556 setbandwidth 9;
+#X msg 134 203 setdrive 5;
+#X msg 355 533 setband 5000;
+#X msg 112 335 setpan 50;
+#X obj 333 35 t b b b b b b b b b b b b b b b b b b b;
+#X msg 134 298 setres 5;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 11 0 0 0;
@@ -4666,7 +4662,7 @@ graph 3086-waveoscgraph;
 #X connect 29 0 0 0;
 #X connect 30 0 0 0;
 #X connect 31 0 0 0;
-#X connect 32 0 96 0;
+#X connect 32 0 95 0;
 #X connect 40 0 0 0;
 #X connect 41 0 40 0;
 #X connect 41 0 22 0;
@@ -4694,31 +4690,40 @@ graph 3086-waveoscgraph;
 #X connect 57 0 0 0;
 #X connect 58 0 0 0;
 #X connect 59 0 0 0;
+#X connect 78 0 0 0;
 #X connect 79 0 0 0;
-#X connect 81 0 0 0;
+#X connect 82 0 0 0;
+#X connect 83 0 0 0;
+#X connect 86 0 0 0;
+#X connect 87 0 0 0;
 #X connect 88 0 0 0;
-#X connect 89 0 0 0;
-#X connect 90 0 0 0;
+#X connect 89 0 88 0;
+#X connect 90 0 55 0;
+#X connect 90 0 45 0;
 #X connect 91 0 0 0;
 #X connect 92 0 0 0;
-#X connect 93 0 92 0;
-#X connect 94 0 90 0;
-#X connect 95 0 55 0;
-#X connect 95 0 45 0;
-#X connect 96 0 11 0;
-#X connect 96 2 2 0;
-#X connect 96 3 53 0;
-#X connect 96 4 51 0;
-#X connect 96 4 52 0;
-#X connect 96 5 50 0;
-#X connect 96 8 97 0;
-#X connect 96 9 98 0;
-#X connect 96 10 1 0;
-#X connect 96 11 95 0;
-#X connect 96 12 30 0;
-#X connect 96 13 31 0;
-#X connect 97 0 0 0;
-#X connect 98 0 0 0;
+#X connect 93 0 0 0;
+#X connect 94 0 0 0;
+#X connect 95 0 11 0;
+#X connect 95 2 2 0;
+#X connect 95 3 53 0;
+#X connect 95 4 51 0;
+#X connect 95 4 52 0;
+#X connect 95 5 50 0;
+#X connect 95 6 83 0;
+#X connect 95 7 82 0;
+#X connect 95 8 79 0;
+#X connect 95 9 93 0;
+#X connect 95 10 91 0;
+#X connect 95 11 1 0;
+#X connect 95 12 90 0;
+#X connect 95 13 30 0;
+#X connect 95 14 31 0;
+#X connect 95 15 92 0;
+#X connect 95 16 94 0;
+#X connect 95 17 78 0;
+#X connect 95 18 96 0;
+#X connect 96 0 0 0;
 #X restore 396 232 pd \$0-settingsmessages;
 #X text 26 27 VocADSR v1.0;
 #X text 16 239 Inlets;
@@ -4747,10 +4752,11 @@ table. Sq \, Tr \, Si \, Sa will remain highlighted. This means you
 are modeling after this osc type.;
 #X obj 28 152 reportissue;
 #X obj 28 132 aboutexternal;
-#X connect 0 0 1 1;
-#X connect 0 0 1 0;
-#X connect 0 5 8 0;
-#X connect 0 6 5 0;
-#X connect 9 0 0 0;
-#X connect 10 0 9 0;
+#X obj 399 597 dac~ 1 2;
+#X connect 0 0 30 0;
+#X connect 0 1 30 1;
+#X connect 0 6 7 0;
+#X connect 0 7 4 0;
+#X connect 8 0 0 0;
+#X connect 9 0 8 0;
 #X coords 0 705 1 704 85 65 0;
