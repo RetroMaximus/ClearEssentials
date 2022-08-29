@@ -1,4 +1,4 @@
-#N canvas 477 251 1318 852 12;
+#N canvas 267 203 1920 997 12;
 #X obj 100 100 cnv 15 500 18 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
 #X obj 120 101 cnv 15 45 16 empty empty Glitch\\\ Buffer 3 7 0 10 #7c7c7c
@@ -15,7 +15,7 @@
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-gbuffertoggle-send \$0-gbuffertoggle-recv
-empty 20 12 0 14 #fcac44 #404040 0;
+empty 20 12 0 14 #fc2828 #404040 0;
 #X obj 455 725 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -694,7 +694,7 @@ empty 20 12 0 14 #b8b8b8 #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-autorandomtoggle-send \$0-autorandomtoggle-recv
-empty 20 12 0 14 #fcac44 #404040 0;
+empty 20 12 0 14 #fc2828 #404040 0;
 #X obj 455 725 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -1003,8 +1003,51 @@ Randomize 6 8 0 9 #b8b8b8 #000000 0;
 #X restore 307 102 pd \$0-randomizedelay;
 #X msg 299 176 0;
 #X obj 359 161 loadbang;
+#X obj 521 218 inlet;
+#X obj 487 653 outlet;
+#X obj 550 361 bng 15 250 50 0 empty empty get_datadump 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 509 545 5 0 0 0 - - - 0;
+#X obj 509 592 f;
+#X obj 509 567 t b f;
+#X floatatom 566 545 5 0 0 0 - - - 0;
+#X obj 566 592 f;
+#X obj 566 567 t b f;
+#X floatatom 626 543 5 0 0 0 - - - 0;
+#X obj 626 590 f;
+#X obj 626 565 t b f;
+#X obj 483 341 del 200;
+#X obj 506 312 t b b b;
+#X obj 678 313 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 632 314 t b f;
+#X obj 644 340 f;
+#X obj 554 412 t b b b b;
+#X obj 677 284 r \$0-gbuffertoggle;
+#X msg 482 382 symbol ce_gbuffer;
+#X obj 738 313 r \$0-autorandomtoggle;
+#X obj 741 336 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 707 363 f;
+#X obj 695 337 t b;
+#X obj 773 390 f;
+#X obj 761 364 t b;
+#X obj 486 622 pack s f f f;
+#X msg 555 446 get_gbuffertoggel;
+#X msg 581 496 get_dealy;
+#X msg 565 470 get_arandomtoggle;
+#X obj 520 241 route get_datadump get_gbuffertoggel get_arandomtoggle
+get_dealy load_gbuffer;
+#X obj 870 382 s \$0-presetdata-1;
+#X obj 885 405 s \$0-presetdata-2;
+#X obj 899 429 s \$0-presetdata-3;
+#X obj 138 -20 r \$0-presetdata-1;
+#X obj 154 2 r \$0-presetdata-2;
+#X obj 168 27 r \$0-presetdata-3;
+#X obj 829 352 unpack f f f;
 #X connect 2 0 9 2;
 #X connect 2 0 24 1;
+#X connect 2 0 59 1;
 #X connect 3 0 31 0;
 #X connect 4 0 9 3;
 #X connect 4 0 15 0;
@@ -1036,4 +1079,50 @@ Randomize 6 8 0 9 #b8b8b8 #000000 0;
 #X connect 31 0 9 1;
 #X connect 33 0 4 0;
 #X connect 34 0 33 0;
+#X connect 35 0 65 0;
+#X connect 37 0 52 0;
+#X connect 38 0 40 0;
+#X connect 39 0 61 1;
+#X connect 40 0 39 0;
+#X connect 40 1 39 1;
+#X connect 41 0 43 0;
+#X connect 42 0 61 2;
+#X connect 43 0 42 0;
+#X connect 43 1 42 1;
+#X connect 44 0 46 0;
+#X connect 45 0 61 3;
+#X connect 46 0 45 0;
+#X connect 46 1 45 1;
+#X connect 47 0 54 0;
+#X connect 48 0 47 0;
+#X connect 48 2 37 0;
+#X connect 49 0 51 1;
+#X connect 50 0 51 0;
+#X connect 51 0 38 0;
+#X connect 52 0 62 0;
+#X connect 52 1 64 0;
+#X connect 52 2 63 0;
+#X connect 53 0 49 0;
+#X connect 54 0 61 0;
+#X connect 55 0 56 0;
+#X connect 56 0 57 1;
+#X connect 57 0 41 0;
+#X connect 58 0 57 0;
+#X connect 59 0 44 0;
+#X connect 60 0 59 0;
+#X connect 61 0 36 0;
+#X connect 62 0 65 0;
+#X connect 63 0 65 0;
+#X connect 64 0 65 0;
+#X connect 65 0 48 0;
+#X connect 65 1 50 0;
+#X connect 65 2 58 0;
+#X connect 65 3 60 0;
+#X connect 65 4 72 0;
+#X connect 69 0 5 0;
+#X connect 70 0 22 0;
+#X connect 71 0 2 0;
+#X connect 72 0 66 0;
+#X connect 72 1 67 0;
+#X connect 72 2 68 0;
 #X coords 0 -1 1 1 500 16 2 100 100;
