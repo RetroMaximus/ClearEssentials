@@ -10,7 +10,7 @@ _Default.. 4 8 0 12 #101054 #00f8fc 0;
 #X obj 441 138 cnv 15 120 22 empty empty empty 20 12 0 14 #000000 #404040
 0;
 #X obj 443 140 cnv 17 117 18 \$0-selectedPatch-send \$0-selectedPatch-recv
-yoyoyoy.. 3 8 0 12 #101054 #00f8fc 0;
+_Default.. 3 8 0 12 #101054 #00f8fc 0;
 #X obj 488 125 cnv 10 38 10 empty empty Patch 3 5 0 10 #606060 #000000
 0;
 #N canvas 295 119 1111 760 \$0-previousCatagory 0;
@@ -846,7 +846,7 @@ LeadSynth \; Mandolin \; NEWCAT \; Obo \; OneShots \; Organ \; OrganJazz
 #X obj 872 869 t b p;
 #X floatatom 746 845 5 0 0 0 selectedPatch - - 0;
 #X obj 872 848 text define -k \$0-patchpresets;
-#A set yoyoyoy.txt \; _Default.txt \;;
+#A set _Default.txt \;;
 #X obj 746 892 text get \$0-patchpresets 0;
 #N canvas 210 35 1413 858 \$0-patchbrowsingControl 0;
 #X floatatom 70 300 5 0 0 0 - - - 0;
@@ -1831,7 +1831,7 @@ LeadSynth \; Mandolin \; NEWCAT \; Obo \; OneShots \; Organ \; OrganJazz
 3 5 0 10 #606060 #000000 0;
 #X obj 278 163 cnv 10 38 10 \$0-catsof-send \$0-catsof-recv 1-Of-48
 3 5 0 10 #606060 #000000 0;
-#X obj 442 163 cnv 10 38 10 \$0-patsof-send \$0-patsof-recv 1-Of-2
+#X obj 442 163 cnv 10 38 10 \$0-patsof-send \$0-patsof-recv 1-Of-1
 3 5 0 10 #606060 #000000 0;
 #N canvas 305 39 1440 817 \$0-showingofdisplay 0;
 #X obj 521 41 r \$0-patscount;
@@ -4806,7 +4806,7 @@ patch browser is refreshed.;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-kitdeltoggle-send \$0-kitdeltoggle-recv
-empty 20 12 0 14 #f430f0 #404040 0;
+empty 20 12 0 14 #14e814 #404040 0;
 #X obj 169 598 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -4981,7 +4981,7 @@ empty 20 12 0 14 #f430f0 #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-catdeltoggle-send \$0-catdeltoggle-recv
-empty 20 12 0 14 #f430f0 #404040 0;
+empty 20 12 0 14 #14e814 #404040 0;
 #X obj 169 598 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -5155,7 +5155,7 @@ empty 20 12 0 14 #f430f0 #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-patchdeltoggle-send \$0-patchdeltoggle-recv
-empty 20 12 0 14 #f430f0 #404040 0;
+empty 20 12 0 14 #14e814 #404040 0;
 #X obj 169 598 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -6903,7 +6903,7 @@ a a a a a a;
 #X connect 35 0 22 0;
 #X coords 0 -1 1 1 48 13 2 100 100;
 #X restore 223 101 pd \$0-refreshbrowserBTN;
-#N canvas 585 77 1318 883 \$0-loadselectedpreset 0;
+#N canvas 469 42 1318 883 \$0-loadselectedpreset 1;
 #X msg 218 384 read \$1;
 #X obj 217 406 text define -k \$0-loadedpreset;
 #A set ce_customarray 1 1 0.8 0 0 0 0.39 0.52 0.394421 3 3 3 0 1 1
@@ -6938,16 +6938,16 @@ a a a a a a;
 #X msg 193 471 0;
 #X msg 228 69 \$1;
 #X msg 138 541 \$1;
-#X obj 137 618 outlet;
-#X obj 187 649 outlet;
-#X obj 239 670 outlet;
-#X obj 291 697 outlet;
-#X obj 343 721 outlet;
-#X obj 395 754 outlet;
-#X obj 447 785 outlet;
-#X obj 502 805 outlet;
-#X obj 556 829 outlet;
-#X obj 611 834 outlet;
+#X obj 139 638 outlet;
+#X obj 189 669 outlet;
+#X obj 241 690 outlet;
+#X obj 293 717 outlet;
+#X obj 345 741 outlet;
+#X obj 397 774 outlet;
+#X obj 449 805 outlet;
+#X obj 504 825 outlet;
+#X obj 558 849 outlet;
+#X obj 613 854 outlet;
 #X obj 227 44 - 10;
 #X msg 147 64 bang;
 #X obj 121 17 t b f b f;
@@ -7084,9 +7084,6 @@ a a a a a a;
 #X f 62;
 #X obj 28 144 s \$0-attotal;
 #X obj 28 115 r \$0-attotal;
-#X obj 138 567 route ce_customarray ce_adsr ce_voicedmidi ce_gbuffer
-ce_lfopartials ce_filters ce_delay ce_noise ce_reverb ce_example,
-f 120;
 #X text 330 123 Adding a custom external patch?;
 #X text 279 121 Step 1;
 #X obj 170 448 s \$0-getdetailsonline;
@@ -7113,7 +7110,7 @@ f 120;
 #X connect 7 0 4 0;
 #X connect 8 0 1 1;
 #X connect 9 0 0 0;
-#X restore 188 620 pd dataload-adsr;
+#X restore 190 640 pd dataload-adsr;
 #N canvas 234 234 1920 997 \$0-dataload-voicedmidi 0;
 #X obj 106 99 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
@@ -7136,7 +7133,7 @@ f 120;
 #X connect 7 0 4 0;
 #X connect 8 0 1 1;
 #X connect 9 0 0 0;
-#X restore 238 646 pd \$0-dataload-voicedmidi;
+#X restore 240 666 pd \$0-dataload-voicedmidi;
 #N canvas 166 230 585 333 \$0-dataload-customarray 0;
 #X obj 110 83 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
@@ -7163,7 +7160,7 @@ f 120;
 #X connect 8 0 2 2;
 #X connect 9 0 1 1;
 #X connect 10 0 0 0;
-#X restore 139 593 pd \$0-dataload-customarray;
+#X restore 141 613 pd \$0-dataload-customarray;
 #N canvas 359 356 450 300 \$0-dataload-gbuffer 0;
 #X obj 110 108 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -7189,7 +7186,7 @@ f 120;
 #X connect 8 0 4 0;
 #X connect 9 0 1 1;
 #X connect 10 0 0 0;
-#X restore 290 672 pd \$0-dataload-gbuffer;
+#X restore 292 692 pd \$0-dataload-gbuffer;
 #N canvas 669 188 639 414 \$0-dataload-lfopartials 0;
 #X obj 120 111 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -7217,7 +7214,7 @@ f 120;
 #X connect 8 0 2 2;
 #X connect 9 0 1 1;
 #X connect 10 0 0 0;
-#X restore 345 697 pd \$0-dataload-lfopartials;
+#X restore 347 717 pd \$0-dataload-lfopartials;
 #N canvas 604 135 548 427 \$0-dataload-filters 0;
 #X obj 67 85 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
@@ -7245,7 +7242,7 @@ f 120;
 #X connect 8 0 4 0;
 #X connect 9 0 1 1;
 #X connect 10 0 0 0;
-#X restore 395 724 pd \$0-dataload-filters;
+#X restore 397 744 pd \$0-dataload-filters;
 #N canvas 234 234 1920 997 \$0-dataload-delay 0;
 #X obj 90 442 outlet;
 #X obj 64 21 inlet;
@@ -7271,7 +7268,7 @@ f 120;
 #X connect 8 0 9 0;
 #X connect 9 0 0 0;
 #X connect 10 0 3 1;
-#X restore 447 752 pd \$0-dataload-delay;
+#X restore 449 772 pd \$0-dataload-delay;
 #N canvas 234 234 1920 997 \$0-dataload-noise 0;
 #X obj 90 442 outlet;
 #X obj 64 21 inlet;
@@ -7294,7 +7291,7 @@ f 120;
 #X connect 7 0 0 0;
 #X connect 8 0 7 0;
 #X connect 9 0 2 1;
-#X restore 502 779 pd \$0-dataload-noise;
+#X restore 504 799 pd \$0-dataload-noise;
 #N canvas 719 290 409 379 \$0-dataload-reverb 0;
 #X obj 47 276 outlet;
 #X obj 64 21 inlet;
@@ -7317,7 +7314,7 @@ f 120;
 #X connect 7 0 0 0;
 #X connect 8 0 7 0;
 #X connect 9 0 2 1;
-#X restore 557 805 pd \$0-dataload-reverb;
+#X restore 559 825 pd \$0-dataload-reverb;
 #N canvas 530 234 535 379 \$0-dataload-ecluidean 0;
 #X obj 47 276 outlet;
 #X obj 64 21 inlet;
@@ -7374,7 +7371,7 @@ f 120;
 #X connect 8 0 2 1;
 #X connect 9 0 0 0;
 #X restore 833 672 pd \$0-dataload-example;
-#X text 75 805 Do not mix up the order of the outlets they must stay
+#X text 77 825 Do not mix up the order of the outlets they must stay
 in this order from left to right.;
 #X text 828 723 This is an example of a custom patch that has been
 added that does not exist in the clear essentials library. This can
@@ -7395,9 +7392,14 @@ object will load., f 43;
 #X text 879 615 Step 3;
 #X text 871 636 Copy and paste the example sub-patch to be used as
 a template for new presets.;
+#X obj 138 567 route ce_customarray ce_adsr ce_voicedmidi ce_gbuffer
+ce_lfopartials ce_filters ce_delay ce_noise ce_reverb ce_multislider
+ce_multitoggle ce_example, f 120;
+#X obj 668 882 print Preset for ce_multisldier disabled;
+#X obj 699 908 print Preset for ce_multitoggle disabled;
 #X connect 0 0 1 0;
 #X connect 2 0 4 0;
-#X connect 3 0 46 0;
+#X connect 3 0 45 0;
 #X connect 4 0 15 0;
 #X connect 5 0 6 0;
 #X connect 6 0 40 0;
@@ -7411,7 +7413,7 @@ a template for new presets.;
 #X connect 12 1 29 1;
 #X connect 13 0 2 1;
 #X connect 14 0 12 0;
-#X connect 15 0 42 0;
+#X connect 15 0 70 0;
 #X connect 26 0 14 0;
 #X connect 27 0 7 0;
 #X connect 28 2 27 0;
@@ -7419,7 +7421,7 @@ a template for new presets.;
 #X connect 29 0 8 1;
 #X connect 29 0 10 0;
 #X connect 30 0 32 0;
-#X connect 31 0 57 0;
+#X connect 31 0 56 0;
 #X connect 32 0 34 0;
 #X connect 33 0 30 1;
 #X connect 34 0 35 0;
@@ -7432,31 +7434,33 @@ a template for new presets.;
 #X connect 39 2 31 0;
 #X connect 39 3 33 0;
 #X connect 41 0 28 0;
-#X connect 42 0 49 0;
-#X connect 42 1 47 0;
-#X connect 42 2 48 0;
-#X connect 42 3 50 0;
-#X connect 42 4 51 0;
-#X connect 42 5 52 0;
-#X connect 42 6 53 0;
-#X connect 42 7 54 0;
-#X connect 42 8 55 0;
-#X connect 42 9 59 0;
-#X connect 46 0 2 0;
-#X connect 46 1 45 0;
-#X connect 47 0 17 0;
-#X connect 48 0 18 0;
-#X connect 49 0 16 0;
-#X connect 50 0 19 0;
-#X connect 51 0 20 0;
-#X connect 52 0 21 0;
-#X connect 53 0 22 0;
-#X connect 54 0 23 0;
-#X connect 55 0 24 0;
-#X connect 56 0 25 0;
-#X connect 57 0 56 0;
-#X connect 57 1 56 1;
-#X connect 59 0 58 0;
+#X connect 45 0 2 0;
+#X connect 45 1 44 0;
+#X connect 46 0 17 0;
+#X connect 47 0 18 0;
+#X connect 48 0 16 0;
+#X connect 49 0 19 0;
+#X connect 50 0 20 0;
+#X connect 51 0 21 0;
+#X connect 52 0 22 0;
+#X connect 53 0 23 0;
+#X connect 54 0 24 0;
+#X connect 55 0 25 0;
+#X connect 56 0 55 0;
+#X connect 56 1 55 1;
+#X connect 58 0 57 0;
+#X connect 70 0 48 0;
+#X connect 70 1 46 0;
+#X connect 70 2 47 0;
+#X connect 70 3 49 0;
+#X connect 70 4 50 0;
+#X connect 70 5 51 0;
+#X connect 70 6 52 0;
+#X connect 70 7 53 0;
+#X connect 70 8 54 0;
+#X connect 70 9 71 0;
+#X connect 70 10 72 0;
+#X connect 70 12 58 0;
 #X restore 667 129 pd \$0-loadselectedpreset;
 #X text 847 123 <<< Adding a custom patch? Open to make modifications
 ;

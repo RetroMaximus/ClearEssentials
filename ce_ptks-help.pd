@@ -1,0 +1,106 @@
+#N canvas 628 123 1117 468 12;
+#X text 28 46 Written By: Reg Finley;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 94 239 0;
+#X text 15 239 Inlet(s);
+#X text 9 356 Outlet(s);
+#X text 129 239 float;
+#X obj 275 307 ce_ptks;
+#X floatatom 464 228 5 0 0 1 Sample\ Size - - 0;
+#X msg 463 203 34224;
+#X floatatom 307 223 5 0 0 1 Pitch - - 0;
+#X obj 278 170 hsl 128 15 0 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X msg 344 252 44100;
+#X floatatom 344 278 5 0 0 1 Sample\ Rate - - 0;
+#X text 656 102 If pitch is used sample size and sample rate do not
+need to be set.;
+#X obj 275 357 s \$0-rangesetting;
+#X obj 275 143 r \$0-rangesetting;
+#X text 26 27 ce_ptks v1.0;
+#X obj 451 145 bng 15 250 50 0 empty empty Click\\\ first\\\ then\\\ adjust\\\ slider
+17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 463 174 t b b;
+#X text 654 138 Once the sample rate is set the sample size can change
+at any time. The sample rate only needs to be set once unless it changes.
+;
+#X text 26 85 2022/11/30 7:00 AM;
+#X text 129 259 float;
+#X text 94 259 1;
+#X text 128 279 float;
+#X text 128 297 float;
+#X text 93 279 2;
+#X text 94 296 3;
+#X text 88 355 0 - [set_range 0 \$1<;
+#X text 237 21 [ce_ptks] is a small tool to convert a pitch value displaying
+the key and octave as two symbols.;
+#X text 87 374 0 - symbol - Key;
+#X text 88 395 0 - symbol Octave;
+#X listbox 326 332 7 0 0 0 - - - 0;
+#X floatatom 385 332 5 0 0 0 - - - 0;
+#N canvas 999 241 783 394 \$0-soundfilerexample 0;
+#X obj 34 247 ce_ptks;
+#X floatatom 65 200 5 0 0 1 Pitch - - 0;
+#X obj 65 114 soundfiler;
+#X floatatom 65 143 8 0 0 0 - - - 0;
+#X obj 65 167 expr 44100 / $f1;
+#X obj 36 61 hsl 128 15 0 2.196 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X listbox 85 275 7 0 0 0 - - - 0;
+#X floatatom 144 275 5 0 0 0 - - - 0;
+#X obj 29 303 s \$0-soundfilerrangesetting;
+#X obj 32 10 r \$0-soundfilerrangesetting;
+#X text 332 85 <<< Click first then adjust the slider to see the key
+and octave;
+#X text 211 164 << Make sure the correct sample rate is used here.
+;
+#X text 192 243 Note 3rd and 4th inlets are not needed for this method.
+;
+#X text 192 260 Simply open a sample and just the slider;
+#X msg 64 87 read -resize ../metrotick.wav array2;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array array2 20082 float 2;
+#X coords 0 1 20082 -1 200 140 1;
+#X restore 584 143 graph;
+#X text 41 41 Hold shift to fine tune;
+#X connect 0 0 8 0;
+#X connect 0 1 6 0;
+#X connect 0 2 7 0;
+#X connect 1 0 0 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 0 0;
+#X connect 9 0 5 0;
+#X connect 14 0 2 0;
+#X restore 756 220 pd \$0-soundfilerexample;
+#X text 753 196 How to use pitch with soundfiler;
+#X text 27 10 Pitch To Key Symbol;
+#X obj 463 316 tgl 15 0 empty empty sharp/flat 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 463 337 unchecked = sharp;
+#X text 462 357 checked = flat;
+#X text 94 316 3;
+#X text 128 316 float - 0 or 1;
+#X text 656 18 For [ce_ptks] to work make suer [\$0-rangesetting] is
+connected to the slider inlet. This outlet sets the min and max range
+for the slider. This is manitory in order to calculate the correct
+key symbol based on the sample size and sample rate or pitch.;
+#X text 281 187 Hold shift to fine tune;
+#X connect 9 0 17 0;
+#X connect 9 1 34 0;
+#X connect 9 2 35 0;
+#X connect 10 0 9 3;
+#X connect 11 0 10 0;
+#X connect 12 0 9 1;
+#X connect 13 0 9 0;
+#X connect 14 0 15 0;
+#X connect 15 0 9 2;
+#X connect 18 0 13 0;
+#X connect 20 0 21 0;
+#X connect 21 0 11 0;
+#X connect 21 1 14 0;
+#X connect 39 0 9 4;

@@ -1,7 +1,7 @@
-#N struct 1006-wavegrapharray float x float x-space float color array
-graph 1006-waveoscgraph;
-#N struct 1006-waveoscgraph float y;
-#N canvas 587 235 1277 699 12;
+#N struct 1049-wavegrapharray float x float x-space float color array
+graph 1049-waveoscgraph;
+#N struct 1049-waveoscgraph float y;
+#N canvas 426 200 1106 556 12;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
 #X obj 28 152 reportissue;
@@ -11,30 +11,30 @@ graph 1006-waveoscgraph;
 #X text 201 17 ce_customarray features 12 partials sliders to modify
 harmonics of the osc voice. Presets can be saved and quickly referenced
 with other objects such as [lfopresets].;
-#X obj 520 457 ce_customarray;
+#X obj 453 301 ce_customarray;
 #X text 634 33 Note* Enable midi to frequency only if this is your
 starting point. [setmidinote< and [setfreq< messages can be used to
 trigger notes even if this toggle is not enabled.;
-#X msg 547 426 setslidervalue 0 1;
-#X msg 426 120 setoutlevel 0.8;
-#X msg 445 141 get_outlevel;
-#X msg 477 167 setosctype 0;
-#X msg 484 190 get_osctype;
-#X msg 513 270 get_lastmidi;
-#X msg 533 346 get_lastfreq;
-#X msg 499 219 setmidinote 60 127;
-#X msg 507 243 setmidinote 60 0;
-#X text 641 220 on;
-#X text 632 246 off;
-#X msg 518 300 setfreq 120 127;
-#X text 646 298 on;
-#X msg 523 322 setfreq 120 0;
-#X text 640 320 off;
-#X msg 547 396 get_midistate;
-#X msg 542 373 setmidistate 0;
-#X obj 1013 587 print get-result;
-#X obj 508 600 dac~;
-#X obj 884 615 print inputmidi_message;
+#X msg 480 270 setslidervalue 0 1;
+#X msg 204 112 setoutlevel 0.8;
+#X msg 223 133 get_outlevel;
+#X msg 255 159 setosctype 0;
+#X msg 262 182 get_osctype;
+#X msg 291 262 get_lastmidi;
+#X msg 466 190 get_lastfreq;
+#X msg 277 211 setmidinote 60 127;
+#X msg 285 235 setmidinote 60 0;
+#X text 419 212 on;
+#X text 410 238 off;
+#X msg 451 144 setfreq 120 127;
+#X text 579 142 on;
+#X msg 456 166 setfreq 120 0;
+#X text 573 164 off;
+#X msg 480 240 get_midistate;
+#X msg 475 217 setmidistate 0;
+#X obj 946 431 print get-result;
+#X obj 441 444 dac~;
+#X obj 817 459 print inputmidi_message;
 #X text 27 46 Written By: Reg Finley;
 #X connect 7 0 27 1;
 #X connect 7 0 27 0;
