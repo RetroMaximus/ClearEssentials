@@ -1,4 +1,5 @@
-#N canvas 167 132 1920 997 12;
+#N canvas 640 194 606 489 12;
+#X declare -lib clearessentials;
 #X obj 100 100 cnv 15 500 18 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
 #N canvas 516 196 1920 997 \$0-voicetriggeredMidiNotes 0;
@@ -56,7 +57,7 @@
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-adctomditoggle-send \$0-adctomditoggle-recv
-empty 20 12 0 14 #fc2828 #404040 0;
+empty 20 12 0 14 #3c50fc #404040 0;
 #X obj 169 598 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -631,6 +632,7 @@ get_threshold get_noisefilter load_voicedmidi;
 #X obj 168 27 r \$0-presetdata-3;
 #X obj 177 53 r \$0-presetdata-4;
 #X obj 518 574 unpack f f f f;
+#X obj 345 48 declare -lib clearessentials;
 #X connect 1 0 11 0;
 #X connect 1 0 15 0;
 #X connect 1 1 12 0;

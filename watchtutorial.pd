@@ -1,4 +1,5 @@
-#N canvas 182 182 1920 997 12;
+#N canvas 658 62 844 997 12;
+#X declare -lib clearessentials;
 #X obj 268 59 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 268 185 spigot 0;
@@ -74,6 +75,7 @@ Tutorial 3 8 0 9 #b8b8b8 #000000 0;
 #X msg 90 642 bang;
 #X obj 89 616 r \$0-processwatchtut;
 #X msg 89 688 browse \$1, f 11;
+#X obj 547 21 declare -lib clearessentials;
 #X connect 0 0 1 1;
 #X connect 0 0 4 0;
 #X connect 0 0 7 0;

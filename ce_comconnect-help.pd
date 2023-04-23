@@ -1,4 +1,5 @@
-#N canvas 196 126 1144 571 12;
+#N canvas 467 104 1144 571 12;
+#X declare -path clearessentials;
 #X text 33 64 Aka Scr1ptAl1as;
 #X text 35 103 Pd 0.52.2;
 #X obj 35 149 reportissue;
@@ -8,28 +9,28 @@
 #X text 35 43 Written By: Reg Finley;
 #X obj 333 385 ce_comconnect;
 #X text 33 24 ce_comconnect v1.0;
-#X text 287 17 [ce_comconnect] is a external used to monitor digital
+#X text 276 2 [ce_comconnect] is a external used to monitor digital
 and analog pins of diy dev boards.;
-#X text 287 110 An arduino sketch is provied inside of the zip name
+#X text 276 95 An arduino sketch is provied inside of the zip name
 SerialArduinoEmulation.zip;
 #X text 33 81 2022/11/13 6:13 AM;
-#X text 289 148 Inside of this sketch modify how many digital and analog
+#X text 278 133 Inside of this sketch modify how many digital and analog
 pins are requred. Disconnect and reconnect the dev board. Refreh [ce_comconnect]
 attempt to connect the device.;
-#X text 283 202 About the sketch: The arduino sketch uses TimerOne.h
+#X text 272 187 About the sketch: The arduino sketch uses TimerOne.h
 and SoftwareSerial.h to monitor uninturrputed momentary button presses
 and analog pot value changes. This means loop is free of code and could
 be utilized for more features.;
-#X text 700 210 *Recommended* to copy this patch to a working directory
+#X text 689 195 *Recommended* to copy this patch to a working directory
 keep the original intact then make changes as you wish.;
-#X text 702 10 One known small bug where the last banged pin is "banged"
+#X text 691 -5 One known small bug where the last banged pin is "banged"
 directly before a newly banged pin even those the previously pin has
 been released. Looks as though the pin index is not being updated correctly.
 This will be sorted out soon. If you happen to correct my mistake please
 use the "Report Isuue" button on the left side of this help document.
 ;
-#X text 700 116 Default digital pins are setup for 6 7 8 9 10;
-#X text 701 140 Default analog pins are setup for 1 2 3 4 5;
+#X text 689 101 Default digital pins are setup for 6 7 8 9 10;
+#X text 690 125 Default analog pins are setup for 1 2 3 4 5;
 #X msg 129 332 set_board 2;
 #X msg 125 236 set_bank 0;
 #X msg 126 261 refresh_comconnect;
@@ -39,14 +40,14 @@ use the "Report Isuue" button on the left side of this help document.
 #X msg 129 379 next_port;
 #X msg 129 402 prev_port;
 #X msg 129 425 set_pressrel;
-#X text 702 166 Default baud rate is set to 9600 To adjust baud rate
+#X text 691 151 Default baud rate is set to 9600 To adjust baud rate
 follow th instructions;
 #X text 329 339 Right click and open to adjust the baud rate and setup
 for digital and analog pins., f 43;
 #X text 32 487 Outlet(s) 0;
 #X obj 333 454 tgl 15 0 empty empty Comport\\\ activity\\\ state 17
 7 0 10 #fcfcfc #000000 #000000 0 1;
-#X text 701 280 Total outlets depends on how many pins are used on
+#X text 690 265 Total outlets depends on how many pins are used on
 the dev board. As an example with a arduino mega utilizing 53 digital
 pins using the bank selector each pin can have 10 different functions
 as there is 10 banks to select from. For a total of 530 functions from
@@ -54,10 +55,12 @@ just 53 digital pins. And in turn 16 analog pins turns into 160 analog
 pins. These numbers will vary based on the dev board choosen.;
 #X text 124 488 Comport activity state 1 = A pin is high. 0 = A pin
 is now low., f 63;
-#X text 284 265 Preperations have been made for future versions to
+#X text 273 250 Preperations have been made for future versions to
 be compatible with slave devices via RX TX. This process is partially
 implemented currently not working.;
-#X text 702 253 More About Outlets;
-#X text 280 57 ce_comconnect will monitor the syntax of serial messages
+#X text 691 238 More About Outlets;
+#X text 269 42 ce_comconnect will monitor the syntax of serial messages
 recieved from the sketch to decipher when a pin is high or low.;
+#X obj 27 5 declare -path clearessentials;
+#X obj 35 169 watchtutorial;
 #X connect 7 0 30 0;

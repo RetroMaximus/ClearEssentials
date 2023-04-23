@@ -1,11 +1,12 @@
-#N canvas 1528 670 1189 616 12;
-#X obj 345 235 ce_gbuffer;
+#N canvas 565 205 1189 616 12;
+#X declare -path clearessentials;
+#X obj 250 121 ce_gbuffer;
 #X text 36 56 Written By: Reg Finley;
 #X text 35 77 Aka Scr1ptAl1as;
 #X text 37 116 Pd 0.52.2;
 #X obj 37 162 reportissue;
 #X obj 37 142 aboutexternal;
-#X text 209 27 ce_gbuffer is a simple effect that holds a 2 seconds
+#X text 230 11 ce_gbuffer is a simple effect that holds a 2 seconds
 delay buffer;
 #X text 35 37 ce_gbuffer v1.0;
 #X text 35 94 2022/02/10 10:20AM;
@@ -14,3 +15,5 @@ delay buffer;
 #X text 10 320 Outlet(s);
 #X text 129 239 Audio signal;
 #X text 93 319 0 - Glitched audio signal;
+#X obj 14 6 declare -path clearessentials;
+#X obj 36 183 watchtutorial;

@@ -1,14 +1,15 @@
-#N struct 2039-adsrenvarray float x float x-space float color array
-graph 2039-adsrgraph;
-#N struct 2039-adsrgraph float y;
+#N struct 1391-adsrenvarray float x float x-space float color array
+graph 1391-adsrgraph;
+#N struct 1391-adsrgraph float y;
 #N canvas 37 242 1084 569 12;
+#X declare -path clearessentials;
 #X obj 555 354 ce_adsr;
-#X text 26 67 Aka Scr1ptAl1as;
-#X text 28 106 Pd 0.52.2;
-#X obj 28 152 reportissue;
-#X obj 28 132 aboutexternal;
-#X text 26 27 ce_adsr v1.0;
-#X text 26 85 2022/06/22 12:08AM;
+#X text 26 68 Aka Scr1ptAl1as;
+#X text 28 107 Pd 0.52.2;
+#X obj 28 153 reportissue;
+#X obj 28 133 aboutexternal;
+#X text 26 28 ce_adsr v1.0;
+#X text 26 86 2022/06/22 12:08AM;
 #X msg 554 158 setmidistate 0;
 #X msg 556 182 setmidistate 1;
 #X msg 566 296 setarray;
@@ -17,7 +18,7 @@ graph 2039-adsrgraph;
 #X msg 559 229 setsustain 0.5;
 #X msg 558 205 setrelease 150;
 #X msg 567 317 inputmidi \$1 \$2;
-#X text 201 71 View test.pd for example.;
+#X text 231 61 View test.pd for example.;
 #X text 96 234 0;
 #X text 17 234 Inlet(s);
 #X text 10 430 Outlet(s);
@@ -35,9 +36,11 @@ graph 2039-adsrgraph;
 #X text 96 380 1~;
 #X text 94 510 4 - release value to be used in other patches.;
 #X text 96 490 3 - adsr resized;
-#X text 201 17 ce_adsr features 4 sliders to modify the attack decay
+#X text 231 7 ce_adsr features 4 sliders to modify the attack decay
 sustain and relase of the osc voice.;
-#X text 27 46 Written By: Reg Finley;
+#X text 27 47 Written By: Reg Finley;
+#X obj 14 6 declare -path clearessentials;
+#X obj 28 174 watchtutorial;
 #X connect 7 0 0 0;
 #X connect 8 0 0 0;
 #X connect 9 0 0 0;

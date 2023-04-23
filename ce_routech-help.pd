@@ -1,0 +1,68 @@
+#N canvas 787 315 976 546 12;
+#X declare -path clearessentials;
+#X obj 374 323 ce_routech;
+#X obj 373 368 dac~;
+#X msg 375 267 get_channel;
+#X msg 319 170 adjust_channel 2;
+#X obj 441 368 print;
+#X msg 365 240 bang;
+#X msg 350 217 set_channel;
+#X text 403 238 Gets and sets the channel;
+#X text 435 218 Initiate channel setting;
+#X text 442 170 Only adjustment happens;
+#X text 369 195 a float can be sent == [adjust_channel 2<;
+#X msg 334 193 2;
+#X text 463 268 Get only channel # to last outlet;
+#X text 451 318 << Right click to open if more then 32 channels are
+needed. Some manual editing is required.;
+#X text 41 70 Aka Scr1ptAl1as;
+#X text 43 109 Pd 0.52.2;
+#X obj 43 155 reportissue;
+#X obj 43 135 aboutexternal;
+#X text 109 242 0;
+#X text 38 242 Inlet(s);
+#X text 39 393 Outlet(s);
+#X text 43 49 Written By: Reg Finley;
+#X text 41 30 ce_susbng v1.0;
+#X text 107 267 0;
+#X text 107 289 0;
+#X text 106 338 0;
+#X text 106 314 0;
+#X text 125 397 0;
+#X text 124 420 1;
+#X text 149 420 Get channel result as a float;
+#X msg 147 395 set \$1;
+#X msg 133 243 adjust_channel 2;
+#X msg 133 265 2;
+#X msg 133 289 set_channel;
+#X msg 133 313 bang;
+#X msg 132 336 get_channel;
+#N canvas 156 156 450 300 \$0-tutbtn 0;
+#X obj 100 100 watchtutorial;
+#N canvas 78 78 731 300 \$0-loadtutorial-link 0;
+#X obj 48 162 outlet;
+#X obj 47 84 loadbang;
+#X msg 47 132 symbol https://www.youtube.com/channel/UCfmCjMoyl6K0pntwaSy0-kg
+, f 65;
+#X obj 46 109 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X restore 100 74 pd \$0-loadtutorial-link;
+#X connect 1 0 0 0;
+#X coords 0 -1 1 1 75 13 2 100 100;
+#X restore 42 177 pd \$0-tutbtn;
+#X text 41 88 2022/12/31 4:48 AM;
+#X text 232 5 [ce_routech] is a small external to set the out channel
+for [dac~] or any object that uses [set \$1< message.;
+#X text 230 46 This external is limited to 32 channels. Follow instruction
+below if more are needed.;
+#X obj 14 6 declare -path clearessentials;
+#X connect 0 0 1 0;
+#X connect 0 1 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 11 0 0 0;

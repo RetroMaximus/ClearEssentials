@@ -1,14 +1,15 @@
-#N struct 1175-bang float c float bc float x float y symbol text;
-#N struct 1176-bang float c float bc float x float y symbol text;
-#N struct 1177-bang float c float bc float x float y symbol text;
-#N struct 1178-bang float c float bc float x float y symbol text;
-#N struct 1179-bang float c float bc float x float y symbol text;
-#N struct 1180-bang float c float bc float x float y symbol text;
-#N struct 1181-bang float c float bc float x float y symbol text;
-#N struct 1182-bang float c float bc float x float y symbol text;
-#N struct 1183-bang float c float bc float x float y symbol text;
-#N struct 1184-bang float c float bc float x float y symbol text;
+#N struct 1834-bang float c float bc float x float y symbol text;
+#N struct 1835-bang float c float bc float x float y symbol text;
+#N struct 1836-bang float c float bc float x float y symbol text;
+#N struct 1837-bang float c float bc float x float y symbol text;
+#N struct 1838-bang float c float bc float x float y symbol text;
+#N struct 1839-bang float c float bc float x float y symbol text;
+#N struct 1840-bang float c float bc float x float y symbol text;
+#N struct 1841-bang float c float bc float x float y symbol text;
+#N struct 1842-bang float c float bc float x float y symbol text;
+#N struct 1843-bang float c float bc float x float y symbol text;
 #N canvas 393 116 789 388 12;
+#X declare -path clearessentials;
 #X text 28 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
@@ -23,15 +24,17 @@
 #X obj 460 267 bng 15 250 50 0 empty empty Bang_After_Entry 17 7 0
 10 #fcfcfc #000000 #000000;
 #X text 26 27 ce_numberpad v1.0;
-#X text 203 12 [ce_numberpad] can be used for a command entry tool
-as shown in the example.;
-#X text 220 53 *Note There is no imitation on characters tho the value
+#X text 229 4 [ce_numberpad] can be used for a command entry tool as
+shown in the example.;
+#X text 246 45 *Note There is no imitation on characters tho the value
 still exists is may bleed past the canvas.;
 #X text 26 85 2022/07/24 2:50 AM;
 #X text 129 239 No Inlets;
 #X text 93 318 0 - Display Value;
 #X text 93 338 1 - Entry Value;
 #X text 93 358 2 - Bang After Entry;
+#X obj 14 6 declare -path clearessentials;
+#X obj 31 176 watchtutorial;
 #X connect 8 0 9 0;
 #X connect 8 1 10 0;
 #X connect 8 2 11 0;

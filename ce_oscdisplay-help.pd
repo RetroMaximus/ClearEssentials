@@ -1,7 +1,8 @@
-#N struct 1456-grapharray float x float x-space float color array graph
-1456-oscgraph;
-#N struct 1456-oscgraph float y;
+#N struct 1848-grapharray float x float x-space float color array graph
+1848-oscgraph;
+#N struct 1848-oscgraph float y;
 #N canvas 530 154 585 563 12;
+#X declare -path clearessentials;
 #X text 27 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
@@ -11,13 +12,15 @@
 #X msg 226 172 inputmidi;
 #X msg 248 224 setoscarray;
 #X text 26 27 ce_oscdisplay v1.0;
-#X text 194 13 Display's the active osc voice in this window.;
+#X text 233 4 Display's the active osc voice in this window.;
 #X text 26 85 2022/07/03 4:50PM;
 #X msg 238 199 setmidistate 0;
 #X text 10 320 Outlet(s);
 #X text 95 320 0 - Array signal;
 #X text 94 358 2 - Midi note released;
 #X text 94 338 1 - bang when array changed;
+#X obj 14 6 declare -path clearessentials;
+#X obj 27 175 watchtutorial;
 #X connect 6 0 5 0;
 #X connect 7 0 5 0;
 #X connect 11 0 5 0;

@@ -1,4 +1,5 @@
 #N canvas -61 89 1920 997 12;
+#X declare -lib clearessentials;
 #X floatatom 112 295 5 0 0 0 - - - 0;
 #X obj 112 320 t f;
 #X obj 150 322 symbol;
@@ -272,6 +273,7 @@ empty 20 12 0 14 #14e814 #404040 0;
 #X obj 980 498 unpack f f f f;
 #X obj 588 436 route get_datadump get_delay get_feedback get_volume
 get_state load_cedelay, f 68;
+#X obj 320 12 declare -lib clearessentials;
 #X connect 0 0 1 0;
 #X connect 1 0 5 0;
 #X connect 2 0 5 1;

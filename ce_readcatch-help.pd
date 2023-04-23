@@ -1,0 +1,239 @@
+#N canvas 664 82 1116 597 12;
+#X declare -path clearessentials;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 94 239 0;
+#X text 15 239 Inlet(s);
+#X text 8 277 Outlet(s);
+#X text 27 46 Written By: Reg Finley;
+#X text 129 239 symbol;
+#X obj 256 219 s \$0-symboltest;
+#X text 26 27 ce_readcatch v1.0;
+#X obj 224 260 ce_readcatch;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array array1 20082 float 2;
+#X coords 0 1 20082 -1 100 50 1 0 0;
+#X restore 937 122 graph;
+#X obj 745 213 soundfiler;
+#X msg 745 188 read -resize \$1/metrotick.wav array1;
+#X obj 743 165 pdcontrol;
+#X msg 743 140 dir;
+#X msg 753 337 bang;
+#X obj 754 360 tabplay~ array1;
+#X obj 743 117 bng 15 250 50 0 empty empty Open\\\ this\\\ hihat\\\ wav\\\ first
+17 7 0 10 #fcfcfc #000000 #000000;
+#X msg 787 478 set \$1;
+#X obj 753 278 bng 15 250 50 0 empty empty Play 17 7 0 15 #fcfcfc #000000
+#000000;
+#X obj 753 311 t b b b b;
+#X obj 797 454 r \$0-symboltest;
+#X obj 788 407 r \$0-floattest;
+#X obj 772 384 r \$0-uniquetest;
+#X obj 224 196 t s s;
+#X text 606 13 Note* Throw must be set before [ce_readcatch]. recommended
+to use a "default" name for [throw~] when the patch is first created
+then adjusted before a sound is played. Errors may appear if data is
+sent to the signal before the matching [catch~] is created.;
+#X text 90 275 0 - signal;
+#X obj 789 429 l2s;
+#X obj 755 505 throw~ default;
+#X obj 550 195 \$0;
+#X msg 550 218 symbol \$1-this_is_a_test;
+#X msg 382 175 123;
+#X obj 414 225 s \$0-floattest;
+#X obj 582 269 s \$0-uniquetest;
+#X obj 550 307 ce_readcatch;
+#X obj 382 259 ce_readcatch;
+#X obj 550 246 t s s;
+#X obj 550 173 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 382 200 t f f;
+#X msg 224 171 symbol test123;
+#X text 26 85 2022/3/18 9:04 PM;
+#X obj 247 375 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
+;
+#N canvas 329 161 625 417 vu 0;
+#X obj 59 129 env~ 1024;
+#X obj 161 111 abs~;
+#X obj 161 213 snapshot~;
+#X obj 161 256 rmstodb;
+#X obj 161 21 inlet~;
+#X obj 161 288 - 100;
+#X obj 59 287 - 100;
+#X obj 59 361 outlet;
+#X obj 161 361 outlet;
+#X text 344 307 Check the help file of env~ and slop~ for more details.
+, f 31;
+#X obj 239 89 expr 1000 / $f1;
+#X floatatom 239 117 5 0 0 0 - - - 0;
+#X obj 161 146 slop~ 0 0 0 0 1e+09;
+#X obj 239 18 inlet;
+#X floatatom 239 57 5 0 0 0 - - - 0;
+#X text 359 89 convert to hz;
+#X text 282 118 hz;
+#X text 284 57 peak decay time in ms;
+#X obj 59 171 t f b;
+#X text 345 132 The env~ object is dedicated to RMS analysis. Its output
+is in dB (0-100 range \, pd style) but needs to be converted to dBFS
+(and we do that by simply subtracting 100)., f 31;
+#X text 345 225 The slop~ object is used here for peak detection. We
+need to convert the output to dB with rmstodb and also subtract by
+100 to convert it to dBFS., f 31;
+#X connect 0 0 18 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 3;
+#X connect 12 0 2 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
+#X connect 18 0 6 0;
+#X connect 18 1 2 0;
+#X restore 225 349 pd vu;
+#X floatatom 256 326 5 0 0 0 - - - 0;
+#X msg 257 301 500;
+#X obj 403 379 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
+;
+#N canvas 329 161 625 417 vu 0;
+#X obj 59 129 env~ 1024;
+#X obj 161 111 abs~;
+#X obj 161 213 snapshot~;
+#X obj 161 256 rmstodb;
+#X obj 161 21 inlet~;
+#X obj 161 288 - 100;
+#X obj 59 287 - 100;
+#X obj 59 361 outlet;
+#X obj 161 361 outlet;
+#X text 344 307 Check the help file of env~ and slop~ for more details.
+, f 31;
+#X obj 239 89 expr 1000 / $f1;
+#X floatatom 239 117 5 0 0 0 - - - 0;
+#X obj 161 146 slop~ 0 0 0 0 1e+09;
+#X obj 239 18 inlet;
+#X floatatom 239 57 5 0 0 0 - - - 0;
+#X text 359 89 convert to hz;
+#X text 282 118 hz;
+#X text 284 57 peak decay time in ms;
+#X obj 59 171 t f b;
+#X text 345 132 The env~ object is dedicated to RMS analysis. Its output
+is in dB (0-100 range \, pd style) but needs to be converted to dBFS
+(and we do that by simply subtracting 100)., f 31;
+#X text 345 225 The slop~ object is used here for peak detection. We
+need to convert the output to dB with rmstodb and also subtract by
+100 to convert it to dBFS., f 31;
+#X connect 0 0 18 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 3;
+#X connect 12 0 2 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
+#X connect 18 0 6 0;
+#X connect 18 1 2 0;
+#X restore 381 353 pd vu;
+#X floatatom 412 330 5 0 0 0 - - - 0;
+#X msg 413 305 500;
+#X obj 573 420 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
+;
+#N canvas 329 161 625 417 vu 0;
+#X obj 59 129 env~ 1024;
+#X obj 161 111 abs~;
+#X obj 161 213 snapshot~;
+#X obj 161 256 rmstodb;
+#X obj 161 21 inlet~;
+#X obj 161 288 - 100;
+#X obj 59 287 - 100;
+#X obj 59 361 outlet;
+#X obj 161 361 outlet;
+#X text 344 307 Check the help file of env~ and slop~ for more details.
+, f 31;
+#X obj 239 89 expr 1000 / $f1;
+#X floatatom 239 117 5 0 0 0 - - - 0;
+#X obj 161 146 slop~ 0 0 0 0 1e+09;
+#X obj 239 18 inlet;
+#X floatatom 239 57 5 0 0 0 - - - 0;
+#X text 359 89 convert to hz;
+#X text 282 118 hz;
+#X text 284 57 peak decay time in ms;
+#X obj 59 171 t f b;
+#X text 345 132 The env~ object is dedicated to RMS analysis. Its output
+is in dB (0-100 range \, pd style) but needs to be converted to dBFS
+(and we do that by simply subtracting 100)., f 31;
+#X text 345 225 The slop~ object is used here for peak detection. We
+need to convert the output to dB with rmstodb and also subtract by
+100 to convert it to dBFS., f 31;
+#X connect 0 0 18 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 3;
+#X connect 12 0 2 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
+#X connect 18 0 6 0;
+#X connect 18 1 2 0;
+#X restore 551 394 pd vu;
+#X floatatom 582 371 5 0 0 0 - - - 0;
+#X msg 583 346 500;
+#X text 200 115 Open the wav \, assign the [ce_readcatch] object below
+then click play., f 70;
+#X text 201 37 [ce_readcatch] creates a [catch~] dynamicly based on
+a symbol or float.;
+#X obj 14 6 declare -path clearessentials;
+#X connect 11 0 44 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 30 0;
+#X connect 19 0 16 0;
+#X connect 20 0 30 0;
+#X connect 21 0 22 0;
+#X connect 22 0 17 0;
+#X connect 23 0 20 0;
+#X connect 24 0 29 0;
+#X connect 25 0 20 0;
+#X connect 26 0 11 0;
+#X connect 26 1 9 0;
+#X connect 29 0 20 0;
+#X connect 31 0 32 0;
+#X connect 32 0 38 0;
+#X connect 33 0 40 0;
+#X connect 36 0 52 0;
+#X connect 37 0 48 0;
+#X connect 38 0 36 0;
+#X connect 38 1 35 0;
+#X connect 39 0 31 0;
+#X connect 40 0 37 0;
+#X connect 40 1 34 0;
+#X connect 41 0 26 0;
+#X connect 44 0 43 0;
+#X connect 44 1 43 1;
+#X connect 45 0 44 1;
+#X connect 46 0 45 0;
+#X connect 48 0 47 0;
+#X connect 48 1 47 1;
+#X connect 49 0 48 1;
+#X connect 50 0 49 0;
+#X connect 52 0 51 0;
+#X connect 52 1 51 1;
+#X connect 53 0 52 1;
+#X connect 54 0 53 0;

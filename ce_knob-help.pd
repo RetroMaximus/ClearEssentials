@@ -1,0 +1,85 @@
+#N struct 1532-g1 float x float y float q float lw float lc float fc
+float plc float pc float bgc;
+#N canvas 589 120 1078 701 12;
+#X obj 309 623 print;
+#X text 21 49 Written By: Reg Finley;
+#X text 20 70 Aka Scr1ptAl1as;
+#X text 22 109 Pd 0.52.2;
+#X obj 22 155 reportissue;
+#X obj 22 135 aboutexternal;
+#X text 195 138 Overlay images are named with this syntax from 0 to
+10;
+#X text 208 169 value-0-32.gif;
+#X text 208 191 value-1-32.gif;
+#X text 208 211 value-2-32.gif;
+#X text 321 166 value-0-64.gif;
+#X text 321 188 value-1-64.gif;
+#X text 321 208 value-2-64.gif;
+#X text 209 228 ect...;
+#X text 321 228 ect...;
+#X text 443 231 ect...;
+#X text 443 169 value-0-100.gif;
+#X text 443 191 value-1-100.gif;
+#X text 443 211 value-2-100.gif;
+#X text 196 83 [ce_knob] works with a hidden vslider that updates a
+overlay image based on its current value for each value change of the
+vslider.;
+#X text 20 88 2022/06/26 11:02PM;
+#X text 628 36 Note* open value-0-32.gif \, value-0-64.gif or value-0-100.gif
+in your favorite image editor to see how the overlay is designed.;
+#X text 638 93 Backup images are located in:;
+#X text 635 112 "clearessentials/images/";
+#X text 635 134 While the value looks like it only snaps to whole nubmers
+decimal values are in fact sent to the outlet.;
+#X text 320 310 999 = white;
+#X msg 332 352 setfgcolor 200;
+#X msg 336 404 setlinewidth 4;
+#X msg 337 378 setlinecolor 30;
+#X obj 498 395 ce_colorpicker;
+#X msg 558 410 setbgcolor \$1;
+#X msg 320 329 setbgcolor 999;
+#X text 556 429 A random color is chossen automaticly when ce_knob
+is first loaded. To set a desired color use ths message to force a
+color change.;
+#X obj 499 348 loadbang;
+#X msg 498 371 setcolor 5;
+#X text 586 370 0 - 7;
+#X text 590 391 4th outlet of [ce_colorpicker] gives rgb color float
+;
+#X msg 320 555 bang;
+#X msg 297 528 setsize 0;
+#X obj 309 582 ce_knob;
+#X obj 404 555 ce_knob;
+#X msg 405 527 setsize 1;
+#X msg 521 526 setsize 2;
+#X obj 521 560 ce_knob;
+#X text 413 500 Click to change the size;
+#X text 635 175 ce_knob uses [iem_image] to load images;
+#X text 20 30 ce_knob v1.0;
+#X text 195 20 ce_knob is forced to one of 3 sizes 32px 64px and 100px.
+;
+#X text 194 49 Currently sizes can not be adjusted "live" or on the
+fly outside of these 3 settings.;
+#X msg 192 573 setvalue \$1;
+#X obj 175 441 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 172 460 5 0 0 0 - - - 0;
+#X msg 341 427 setmin 0;
+#X msg 347 450 setmax 10;
+#X floatatom 405 646 5 0 0 0 - - - 0;
+#X connect 29 3 30 0;
+#X connect 30 0 43 0;
+#X connect 33 0 34 0;
+#X connect 34 0 29 0;
+#X connect 37 0 39 0;
+#X connect 38 0 39 0;
+#X connect 39 0 0 0;
+#X connect 40 0 54 0;
+#X connect 41 0 40 0;
+#X connect 42 0 43 0;
+#X connect 49 0 40 0;
+#X connect 50 0 51 0;
+#X connect 51 0 49 0;
+#X connect 52 0 40 0;
+#X connect 53 0 40 0;
+#X coords 0 701 1 700 32 32 0;

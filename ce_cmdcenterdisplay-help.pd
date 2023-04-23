@@ -1,0 +1,70 @@
+#N canvas 518 150 1129 551 12;
+#X declare -path clearessentials;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 94 239 0;
+#X text 15 239 Inlet(s);
+#X text 10 320 Outlet(s);
+#X text 26 85 2022/07/24 2:50 AM;
+#X text 129 239 No Inlets;
+#X text 93 318 0 - Display Value;
+#X text 93 338 1 - Entry Value;
+#X text 93 358 2 - Bang After Entry;
+#X text 28 46 Written By: Reg Finley;
+#X text 26 27 ce_commandcenter v1.0;
+#N canvas 532 260 814 384 \$0-showcommandsfile 0;
+#X obj 57 166 pdcontrol;
+#X obj 40 -13 inlet;
+#X obj 44 35 pdcontrol;
+#X obj 54 109 pack s s;
+#X msg 95 84 symbol commandlist.txt;
+#X obj 45 63 t s b;
+#X msg 57 141 browse \$1/cmds/\$2, f 63;
+#X msg 41 12 dir;
+#X obj 307 199 pdcontrol;
+#X msg 304 176 dir;
+#X obj 300 102 inlet;
+#X listbox 305 225 55 0 0 0 - - - 0;
+#X msg 305 251 browse \$1/cmds, f 63;
+#X obj 305 279 pdcontrol;
+#X connect 1 0 7 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 5 1 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 2 0;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X restore 678 137 pd \$0-showcommandsfile;
+#X obj 680 113 bng 15 250 50 0 empty empty Show\\\ commands\\\ file
+17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 828 115 bng 15 250 50 0 empty empty Show\\\ actions\\\ directory
+17 7 0 10 #fcfcfc #000000 #000000;
+#X text 675 228 File name for the action listing files must be all
+lower case. All action file listing will have to be created manuallly
+unless defaults are being used.;
+#X text 675 324 The matching actions for Help menu command is help-actions.txt
+;
+#X text 674 288 The matching actions for Home menu command is home-actions.txt
+;
+#X text 674 362 ect. These files are visible in the actions directory
+;
+#X text 675 170 Every command must have a matching actions file.;
+#X text 675 189 unlimited amount of actions can be referenced and stored
+for each menu command.;
+#X text 674 87 Some preperation is required for custom menu commands
+;
+#X obj 288 159 ce_cmdcenterdisplay;
+#X text 239 20 [ce_cmdcenterdisplay] is a menu display external patch
+to be used with ce_commandcenter.;
+#X obj 14 6 declare -path clearessentials;
+#X obj 28 170 watchtutorial;
+#X connect 15 0 14 0;
+#X connect 16 0 14 1;

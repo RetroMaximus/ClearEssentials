@@ -1,10 +1,11 @@
-#N struct 1111-g1 float x float y float q float lw float lc float fc
+#N struct 1746-g1 float x float y float q float lw float lc float fc
 float plc float pc float bgc;
-#N struct 1113-g1 float x float y float q float lw float lc float fc
+#N struct 1748-g1 float x float y float q float lw float lc float fc
 float plc float pc float bgc;
-#N struct 1118-g1 float x float y float q float lw float lc float fc
+#N struct 1753-g1 float x float y float q float lw float lc float fc
 float plc float pc float bgc;
-#N canvas 589 120 1078 701 12;
+#N canvas 589 120 1107 701 12;
+#X declare -path clearessentials;
 #X obj 290 665 print;
 #X obj 395 546 ce_knob64;
 #X obj 491 528 ce_knob100;
@@ -15,37 +16,37 @@ float plc float pc float bgc;
 #X text 22 109 Pd 0.52.2;
 #X obj 22 155 reportissue;
 #X obj 22 135 aboutexternal;
-#X text 194 61 [ce_knob32];
-#X text 290 61 [ce_knob64];
-#X text 389 61 [ce_knob100];
-#X text 194 89 Currently sizes can not be adjusted "live" or on the
+#X text 229 45 [ce_knob32];
+#X text 325 45 [ce_knob64];
+#X text 424 45 [ce_knob100];
+#X text 229 73 Currently sizes can not be adjusted "live" or on the
 fly.;
-#X text 195 178 Overlay images are named with this syntax from 0 to
+#X text 230 162 Overlay images are named with this syntax from 0 to
 10;
-#X text 208 209 value-0-32.gif;
-#X text 208 231 value-1-32.gif;
-#X text 208 251 value-2-32.gif;
-#X text 321 206 value-0-64.gif;
-#X text 321 228 value-1-64.gif;
-#X text 321 248 value-2-64.gif;
-#X text 209 268 ect...;
-#X text 321 268 ect...;
-#X text 443 271 ect...;
-#X text 443 209 value-0-100.gif;
-#X text 443 231 value-1-100.gif;
-#X text 443 251 value-2-100.gif;
-#X text 196 123 [ce_knob] works with a hidden vslider that updates
+#X text 243 193 value-0-32.gif;
+#X text 243 215 value-1-32.gif;
+#X text 243 235 value-2-32.gif;
+#X text 356 190 value-0-64.gif;
+#X text 356 212 value-1-64.gif;
+#X text 356 232 value-2-64.gif;
+#X text 244 252 ect...;
+#X text 356 252 ect...;
+#X text 478 255 ect...;
+#X text 478 193 value-0-100.gif;
+#X text 478 215 value-1-100.gif;
+#X text 478 235 value-2-100.gif;
+#X text 231 107 [ce_knob] works with a hidden vslider that updates
 a overlay image based on its current value for each value change of
 the vslider.;
 #X text 20 88 2022/06/26 11:02PM;
-#X text 628 36 Note* open value-0-32.gif \, value-0-64.gif or value-0-100.gif
+#X text 663 20 Note* open value-0-32.gif \, value-0-64.gif or value-0-100.gif
 in your favorite image editor to see how the overlay is designed.;
-#X text 638 93 Backup images are located in:;
-#X text 635 112 "clearessentials/images/";
+#X text 673 77 Backup images are located in:;
+#X text 670 96 "clearessentials/images/";
 #X text 20 30 ce_knob32 v1.0;
-#X text 195 20 ce_knob32 is forced to one of 3 sizes 32px 64px and
-100px each is created with te syntax below.;
-#X text 635 134 While the value looks like it only snaps to whole nubmers
+#X text 230 4 ce_knob32 is forced to one of 3 sizes 32px 64px and 100px
+each is created with te syntax below.;
+#X text 670 118 While the value looks like it only snaps to whole nubmers
 decimal values are in fact sent to the outlet.;
 #X text 320 310 999 = white;
 #X msg 332 352 setfgcolor 200;
@@ -70,6 +71,9 @@ color change.;
 #X obj 297 555 ce_knob32;
 #X msg 293 516 bang;
 #X msg 218 474 setsize 0;
+#X obj 14 6 declare -path clearessentials;
+#X obj 23 176 watchtutorial;
+#X text 672 157 iemgui is needed for this external.;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
 #X connect 41 3 42 0;

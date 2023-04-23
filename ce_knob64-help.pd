@@ -1,10 +1,11 @@
-#N struct 1732-g1 float x float y float q float lw float lc float fc
-float plc float pc;
-#N struct 1733-g1 float x float y float q float lw float lc float fc
-float plc float pc;
-#N struct 1736-g1 float x float y float q float lw float lc float fc
-float plc float pc;
+#N struct 1768-g1 float x float y float q float lw float lc float fc
+float plc float pc float bgc;
+#N struct 1770-g1 float x float y float q float lw float lc float fc
+float plc float pc float bgc;
+#N struct 1774-g1 float x float y float q float lw float lc float fc
+float plc float pc float bgc;
 #N canvas 641 174 1124 517 12;
+#X declare -path clearessentials;
 #X obj 436 428 print;
 #X obj 528 365 ce_knob64;
 #X obj 624 347 ce_knob100;
@@ -49,6 +50,9 @@ a overlay image based on its current value for each value change of
 the vslider.;
 #X text 38 32 ce_knob64 v1.0;
 #X obj 436 382 ce_knob32;
+#X obj 14 6 declare -path clearessentials;
+#X obj 41 176 watchtutorial;
+#X text 655 138 iemgui is needed for this external.;
 #X connect 1 0 6 0;
 #X connect 2 0 7 0;
 #X connect 37 0 0 0;

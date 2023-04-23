@@ -1,0 +1,41 @@
+#N canvas 809 314 701 387 12;
+#X declare -path clearessentials;
+#X obj 402 189 ce_chrfromfloat;
+#X obj 402 218 print;
+#X floatatom 402 159 5 0 0 0 - - - 0;
+#X text 50 74 Aka Scr1ptAl1as;
+#X text 52 113 Pd 0.52.2;
+#X obj 52 159 reportissue;
+#X obj 52 139 aboutexternal;
+#X text 52 53 Written By: Reg Finley;
+#N canvas 156 156 450 300 \$0-tutbtn 0;
+#X obj 100 100 watchtutorial;
+#N canvas 78 78 731 300 \$0-loadtutorial-link 0;
+#X obj 48 162 outlet;
+#X obj 47 84 loadbang;
+#X msg 47 132 symbol https://www.youtube.com/channel/UCfmCjMoyl6K0pntwaSy0-kg
+, f 65;
+#X obj 46 109 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X restore 100 74 pd \$0-loadtutorial-link;
+#X connect 1 0 0 0;
+#X coords 0 -1 1 1 75 13 2 100 100;
+#X restore 51 181 pd \$0-tutbtn;
+#X text 46 254 Outlet;
+#X text 45 228 Inlet;
+#X text 50 33 ce_chrfromfloat v1.0;
+#X text 233 14 ce_chrfromfloat will take a float and convert to its
+ascii character.;
+#X text 233 53 Float vaule can be set from 0 to 255 If a value is less
+then 0 no result will be sent to the outlet. If a value is greater
+then 255 The outlet will reset back to the ascii character value of
+0 The inlet float can be greater the 255 but keep this in mind.;
+#X text 97 228 0 - float;
+#X text 97 255 0 - ascii character;
+#X text 50 92 2023/4/21 8:42 PM;
+#X obj 14 6 declare -path clearessentials;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

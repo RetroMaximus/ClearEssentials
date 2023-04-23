@@ -1,4 +1,5 @@
 #N canvas 565 54 1224 640 12;
+#X declare -lib clearessentials;
 #X obj 249 310 bng 15 250 50 0 empty empty A 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 280 308 bng 15 250 50 0 empty empty B 17 7 0 10 #fcfcfc #000000
@@ -1252,9 +1253,10 @@ X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z - = ` ~ !
 #X msg 522 145 symbol;
 #X msg 395 172 symbol \$1;
 #X msg 311 165 symbol;
-#X obj 208 53 route setsymbol setjoiner;
+#X obj 207 49 route setsymbol setjoiner;
 #X obj 208 118 t b a b b b;
 #X obj 155 150 symbol \$1;
+#X obj 259 16 declare -lib clearessentials;
 #X connect 0 0 35 0;
 #X connect 1 0 37 0;
 #X connect 2 0 38 0;

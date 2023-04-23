@@ -1,4 +1,5 @@
 #N canvas 703 187 819 522 12;
+#X declare -lib clearessentials;
 #X obj 1733 276 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 1712 293 *~;
@@ -329,6 +330,7 @@ get_state inputmidi load_noise, f 68;
 #X obj 168 27 r \$0-presetdata-3;
 #X obj 177 53 r \$0-presetdata-4;
 #X obj 1642 360 unpack f f f f;
+#X obj 330 36 declare -lib clearessentials;
 #X connect 0 0 1 1;
 #X connect 1 0 2 0;
 #X connect 2 0 6 0;

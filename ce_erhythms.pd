@@ -1,4 +1,5 @@
-#N canvas 193 0 1920 997 12;
+#N canvas 573 56 714 842 12;
+#X declare -lib clearessentials;
 #X obj 455 57 ce_colorpicker;
 #X obj 452 72 s NewUiColorColorNum;
 #X obj 1493 322 humanmetro;
@@ -1791,6 +1792,7 @@ f f f;
 #X obj 1158 685 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 1157 657 del 200;
+#X obj 833 7 declare -lib clearessentials;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;

@@ -1,4 +1,5 @@
-#N canvas 213 100 1920 997 12;
+#N canvas 689 6 566 358 12;
+#X declare -lib clearessentials;
 #X msg 627 830 clear;
 #X msg 675 830 read wtablepresets.txt;
 #X obj 677 857 text define -k \$0-wtablepresets;
@@ -608,7 +609,7 @@
 #X coords 0 -1 1 1 13 13 2 100 100;
 #X restore 197 101 pd \$0-nextKit;
 #X obj 115 102 cnv 10 80 11 \$0-presettable-send \$0-presettable-recv
-Saw 3 5 0 10 #131255 #ffffff 0;
+Square 3 5 0 10 #131255 #ffffff 0;
 #X obj 483 161 t b f;
 #X obj 483 188 f;
 #X obj 559 114 t b f;
@@ -642,6 +643,7 @@ Saw 3 5 0 10 #131255 #ffffff 0;
 #X obj 652 332 t f f b b f f, f 14;
 #X obj 1738 740 outlet;
 #X obj 1687 739 outlet;
+#X obj 97 32 declare -lib clearessentials;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 3 0 2 0;

@@ -1,23 +1,24 @@
-#N canvas 546 273 1281 590 12;
-#X msg 513 220 getthreshold;
-#X msg 513 245 getnoisefilter;
-#X msg 513 269 getmicinput;
-#X msg 514 293 gettoggle;
-#X obj 641 271 hsl 100 12 0.01 1 1 0 empty empty NoiseFilter 3 6 0
+#N canvas 545 273 931 590 12;
+#X declare -path clearessentials;
+#X msg 256 140 getthreshold;
+#X msg 256 165 getnoisefilter;
+#X msg 256 189 getmicinput;
+#X msg 257 213 gettoggle;
+#X obj 384 191 hsl 100 12 0.01 1 1 0 empty empty NoiseFilter 3 6 0
 10 #dfdfdf #00faff #000000 0 1;
-#X obj 640 229 hsl 100 12 0.01 1 0 0 empty empty Threshold 3 6 0 10
+#X obj 383 149 hsl 100 12 0.01 1 0 0 empty empty Threshold 3 6 0 10
 #dfdfdf #00faff #000000 0 1;
-#X obj 640 187 hsl 100 12 0 1 0 0 empty empty Input\\\ Vol 3 6 0 10
+#X obj 383 107 hsl 100 12 0 1 0 0 empty empty Input\\\ Vol 3 6 0 10
 #dfdfdf #00faff #000000 0 1;
-#X obj 626 140 tgl 15 0 empty empty adctomidi\\\ status 17 7 0 10 #fcfcfc
+#X obj 369 60 tgl 15 0 empty empty adctomidi\\\ status 17 7 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X msg 637 204 setmicinput \$1;
-#X msg 637 247 setthreshold \$1;
-#X msg 638 289 setnoisefilter \$1;
-#X obj 617 320 t a;
-#X msg 626 162 settoggle \$1;
-#X obj 1047 386 print get_result;
-#X obj 552 383 print note;
+#X msg 380 124 setmicinput \$1;
+#X msg 380 167 setthreshold \$1;
+#X msg 381 209 setnoisefilter \$1;
+#X obj 360 240 t a;
+#X msg 369 82 settoggle \$1;
+#X obj 790 306 print get_result;
+#X obj 295 303 print note;
 #X text 36 56 Written By: Reg Finley;
 #X text 35 77 Aka Scr1ptAl1as;
 #X text 37 116 Pd 0.52.2;
@@ -25,16 +26,18 @@
 #X obj 37 142 aboutexternal;
 #X text 10 320 Outlet(s);
 #X text 93 319 0 - float;
-#X obj 714 380 print note_and_vel;
-#X obj 880 383 print vel;
+#X obj 457 300 print note_and_vel;
+#X obj 623 303 print vel;
 #X text 35 94 2022/06/24 12:13AM;
 #X text 94 340 1 - float \, float;
 #X text 94 360 2 - float;
 #X text 94 380 3 - get results;
-#X obj 551 358 ce_voicedmidi;
+#X obj 294 278 ce_voicedmidi;
 #X text 35 37 ce_voicedmidi v1.0;
-#X text 209 25 ce_voicedmidi will convert the tone through a mic to
+#X text 224 6 ce_voicedmidi will convert the tone through a mic to
 midi notes and outlet its numerical note value and velocity.;
+#X obj 14 6 declare -path clearessentials;
+#X obj 37 187 watchtutorial;
 #X connect 0 0 28 0;
 #X connect 1 0 28 0;
 #X connect 2 0 28 0;

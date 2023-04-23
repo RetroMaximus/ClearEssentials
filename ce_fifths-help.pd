@@ -1,0 +1,50 @@
+#N canvas 739 147 1079 704 12;
+#X declare -path clearessentials;
+#X obj 360 219 ce_fifths 0;
+#X obj 427 529 keyboard 17 80 4 3 1 0 empty empty;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 94 239 0;
+#X text 15 239 Inlet(s);
+#X text 8 327 Outlet(s);
+#X text 27 46 Written By: Reg Finley;
+#X text 26 27 ce_fifths v1.0;
+#X text 26 85 2022/3/20 2:24 PM;
+#X text 231 7 [ce_fifths] will play random chords based on the circle
+of fifths.;
+#X text 652 5 Note * make sure chord percision sliders are less then
+the note duration sliders. If one is greater than some notes will not
+be played.;
+#X text 224 44 While adjusting the note duration the chord precision
+is forced by default. Feel free to nudge both the min and max chord
+precsion sliders to the left a bit more to ensure all notes get played.
+;
+#X text 645 59 When a random note is "Inverted" ce_fifths will try
+to jump to the opposite side of the cricle of fifths then adjust x
+notes to the left or right.;
+#X text 646 109 Left to right movment is 1 in 3 chances whenever a
+random note is played.;
+#X text 224 111 Use a ployfonic synth to take full advantage of this
+external patch.;
+#X text 89 405 1 - off midichord;
+#X text 90 346 0 - set midinote 127;
+#X msg 360 190 start;
+#X msg 406 190 stop;
+#X text 89 424 2 - flush;
+#X text 90 386 1 - on midinote;
+#X text 90 366 0 - set midinote 0;
+#X text 89 441 3 - info dump;
+#X text 89 461 4 - midi details;
+#X msg 119 241 start;
+#X msg 119 265 stop;
+#X msg 120 290 dump;
+#X msg 307 182 dump;
+#X obj 14 6 declare -path clearessentials;
+#X obj 28 173 watchtutorial;
+#X connect 0 1 1 0;
+#X connect 0 2 1 0;
+#X connect 20 0 0 0;
+#X connect 21 0 0 0;
+#X connect 30 0 0 0;

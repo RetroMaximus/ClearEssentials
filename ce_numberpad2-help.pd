@@ -1,0 +1,43 @@
+#N struct 1114-bang float c float bc float x float y symbol text;
+#N struct 1115-bang float c float bc float x float y symbol text;
+#N struct 1116-bang float c float bc float x float y symbol text;
+#N struct 1117-bang float c float bc float x float y symbol text;
+#N struct 1118-bang float c float bc float x float y symbol text;
+#N struct 1119-bang float c float bc float x float y symbol text;
+#N struct 1120-bang float c float bc float x float y symbol text;
+#N struct 1121-bang float c float bc float x float y symbol text;
+#N struct 1122-bang float c float bc float x float y symbol text;
+#N struct 1123-bang float c float bc float x float y symbol text;
+#N canvas 837 144 789 388 12;
+#X declare -path clearessentials;
+#X text 28 46 Written By: Reg Finley;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 94 239 0;
+#X text 15 239 Inlet(s);
+#X text 10 320 Outlet(s);
+#X obj 377 158 ce_numberpad;
+#X floatatom 365 265 5 0 0 0 Display_Value - - 0;
+#X floatatom 401 291 5 0 0 0 Entry_Value - - 0;
+#X obj 434 267 bng 15 250 50 0 empty empty Bang_After_Entry 17 7 0
+10 #fcfcfc #000000 #000000;
+#X text 26 27 ce_numberpad v1.0;
+#X text 236 5 [ce_numberpad] can be used for a command entry tool as
+shown in the example.;
+#X text 253 46 *Note There is no imitation on characters tho the value
+still exists is may bleed past the canvas.;
+#X text 26 85 2022/07/24 2:50 AM;
+#X text 129 239 No Inlets;
+#X text 93 318 0 - Display Value;
+#X text 93 338 1 - Entry Value;
+#X text 93 358 2 - Bang After Entry;
+#X obj 459 286 bng 15 250 50 0 empty empty Reset_Number_Pad 17 7 0
+10 #fcfcfc #000000 #000000;
+#X obj 27 5 declare -path clearessentials;
+#X obj 27 171 watchtutorial;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 8 2 11 0;
+#X connect 8 3 20 0;

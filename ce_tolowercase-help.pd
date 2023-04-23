@@ -1,15 +1,16 @@
 #N canvas 361 51 1125 370 12;
+#X declare -path clearessentials;
 #X msg 461 217 setjoiner symbol;
 #X text 27 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
-#X text 634 33 Note* Atoms can be passed to recive a number as a symbol.
+#X text 655 3 Note* Atoms can be passed to recive a number as a symbol.
 ;
-#X text 201 17 [tolowercase] turns symbols that contain capital letters
+#X text 230 3 [tolowercase] turns symbols that contain capital letters
 to all lowercase.;
 #X text 26 85 2022/06/13 11:45 PM;
 #X text 26 27 tolowercase v1.0;
-#X text 200 50 Joiner can be set for a desired result.;
+#X text 229 36 Joiner can be set for a desired result.;
 #N canvas 947 480 656 454 \$0-examplepatch 0;
 #X obj 45 26 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
@@ -75,10 +76,12 @@ to all lowercase.;
 #X obj 28 132 aboutexternal;
 #X obj 450 268 print example_list;
 #X obj 592 266 print example;
-#X text 635 57 One more thing $ dollar signs will be replaced and sent
+#X text 656 27 One more thing $ dollar signs will be replaced and sent
 to outlet but may throw a error if not connected to a [pack] or a [list]
 with the proper $ dollar sign identifier.;
 #X obj 450 242 ce_tolowercase;
+#X obj 14 6 declare -path clearessentials;
+#X obj 28 172 watchtutorial;
 #X connect 0 0 16 0;
 #X connect 10 0 16 0;
 #X connect 16 0 13 0;

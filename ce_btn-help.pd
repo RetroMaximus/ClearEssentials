@@ -1,0 +1,57 @@
+#N struct 4304-bang float c float bc float x float y symbol text;
+#N canvas 393 116 869 453 12;
+#X declare -path clearessentials;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 94 239 0;
+#X text 15 239 Inlet(s);
+#X text 10 320 Outlet(s);
+#N canvas 723 396 450 341 \$0-example 0;
+#X obj 175 187 ce_hextobinary;
+#X obj 175 139 ce_floattohex;
+#X floatatom 158 94 5 0 0 0 - - - 0;
+#X msg 174 118 set_digitlimit 4;
+#X text 19 28 Using [ce_floattohex] to generate a hex value from a
+atom. We can then use that hex value to calculate binary bits.;
+#X obj 175 213 print example_bits;
+#X listbox 175 163 20 0 0 0 - - - 0;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 6 0 0 0;
+#X restore 27 195 pd \$0-example;
+#X text 26 85 2022/07/24 2:55 AM;
+#X text 26 27 ce_btn v1.0;
+#X text 230 12 [ce_btn] is a tool used for quickly designing buttons.
+;
+#X text 230 32 *Note You may have to reopen the patch if the button
+appears blank.;
+#X text 94 317 0 - Bang;
+#X obj 302 203 loadbang;
+#X msg 303 226 symbol (1);
+#X text 300 293 [ce_btn 5 22 15];
+#X text 391 220 Text must be banged outside of the patch when the button
+is first loaded., f 39;
+#X text 371 125 0;
+#X text 371 144 1;
+#X text 406 144 Button Width;
+#X text 406 163 Button Height;
+#X text 237 125 Creation Arguments;
+#X text 405 123 Text start position.;
+#X text 371 163 2;
+#X text 235 69 Button sizing is not automatic find a starting position
+then trial and error with the with manually until you find a desired
+size.;
+#X text 128 239 Text as symbol;
+#X text 298 314 Right click on the button and choose properties then
+uncheck Graph-On-Parent and click apply to modify its creation arguments.
+;
+#X obj 303 274 ce_btn 1 2 22 15;
+#X text 28 46 Written By: Reg Finley;
+#X obj 14 6 declare -path clearessentials;
+#X obj 27 171 watchtutorial;
+#X connect 13 0 14 0;
+#X connect 14 0 27 0;

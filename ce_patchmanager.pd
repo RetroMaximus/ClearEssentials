@@ -1,4 +1,5 @@
-#N canvas 344 67 1250 845 12;
+#N canvas 676 266 676 375 12;
+#X declare -lib clearessentials;
 #X obj 100 100 cnv 15 500 100 empty empty empty 20 12 0 14 #7c7c7c
 #404040 0;
 #X obj 279 138 cnv 15 120 22 empty empty empty 20 12 0 14 #000000 #404040
@@ -4806,7 +4807,7 @@ patch browser is refreshed.;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-kitdeltoggle-send \$0-kitdeltoggle-recv
-empty 20 12 0 14 #14e814 #404040 0;
+empty 20 12 0 14 #fc2828 #404040 0;
 #X obj 169 598 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -4981,7 +4982,7 @@ empty 20 12 0 14 #14e814 #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-catdeltoggle-send \$0-catdeltoggle-recv
-empty 20 12 0 14 #14e814 #404040 0;
+empty 20 12 0 14 #fc2828 #404040 0;
 #X obj 169 598 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -5155,7 +5156,7 @@ empty 20 12 0 14 #14e814 #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-patchdeltoggle-send \$0-patchdeltoggle-recv
-empty 20 12 0 14 #14e814 #404040 0;
+empty 20 12 0 14 #fc2828 #404040 0;
 #X obj 169 598 s;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
@@ -6903,7 +6904,7 @@ a a a a a a;
 #X connect 35 0 22 0;
 #X coords 0 -1 1 1 48 13 2 100 100;
 #X restore 223 101 pd \$0-refreshbrowserBTN;
-#N canvas 469 42 1318 883 \$0-loadselectedpreset 1;
+#N canvas 469 42 1318 883 \$0-loadselectedpreset 0;
 #X msg 218 384 read \$1;
 #X obj 217 406 text define -k \$0-loadedpreset;
 #A set ce_customarray 1 1 0.8 0 0 0 0.39 0.52 0.394421 3 3 3 0 1 1
@@ -7464,6 +7465,7 @@ ce_multitoggle ce_example, f 120;
 #X restore 667 129 pd \$0-loadselectedpreset;
 #X text 847 123 <<< Adding a custom patch? Open to make modifications
 ;
+#X obj 92 44 declare -lib clearessentials;
 #X connect 16 1 26 3;
 #X connect 17 0 26 0;
 #X connect 20 0 16 0;

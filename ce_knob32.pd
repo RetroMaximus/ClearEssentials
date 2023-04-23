@@ -1,6 +1,7 @@
-#N struct 1030-g1 float x float y float q float lw float lc float fc
+#N struct 1214-g1 float x float y float q float lw float lc float fc
 float plc float pc float bgc;
 #N canvas 473 193 512 361 12;
+#X declare -lib clearessentials;
 #X obj 100 77 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 99 173 outlet;
@@ -20,7 +21,7 @@ lc float fc float plc float pc float bgc, f 84;
 #X text 1029 268 fc == fill color;
 #X text 1029 289 lc == line color;
 #N canvas -459 16 1920 997 \$0-innerknob 0;
-#X scalar 1030-g1 1 1 0 0 999 630 0 0 999 \;;
+#X scalar 1214-g1 1 1 0 0 999 233 0 0 999 \;;
 #X coords 0 -1 1 1 32 32 2 32 0;
 #X restore 100 100 pd \$0-innerknob;
 #X obj 15 704 outlet;
@@ -254,7 +255,7 @@ lc float fc float plc float pc float bgc, f 84;
 #X msg 966 403 0;
 #X msg 974 465 range \$2 \$3;
 #X obj 15 539 vsl 15 128 2 6 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 11167 1;
+#000000 #000000 12700 1;
 #X floatatom 15 679 5 0 0 0 - - - 0;
 #X floatatom 36 348 5 0 0 0 - - - 0;
 #X obj 309 152 pdcontrol;
@@ -554,7 +555,7 @@ bottom one at a time if changes are made directly to this patch.;
 #X msg 570 209 32;
 #X obj 687 283 filledpolygon bgc bgc lw -1 -2 0 -2 0 0 -1 0;
 #X obj 682 323 filledcurve fc lc lw -1 -2 0 -2 0 0 -1 0;
-#X obj 100 100 iem_image C:/Users/Retro/Documents/Pd/externals/clearessentials/images/value-0-32.gif
+#X obj 100 100 iem_image C:/Users/Retro/Documents/ClearEssentials/images/value-0-32.gif
 0 0 empty empty;
 #X obj 898 739 outlet;
 #X msg 502 174 0;
@@ -746,9 +747,10 @@ setmin setmax setsize, f 78;
 #X connect 148 0 21 0;
 #X coords 1 2 2 32 32 32 2 100 100;
 #X restore 100 100 pd \$0-ce_knob;
-#X obj 229 75 t a;
-#X obj 228 125 namecanvas \$0-knobparent;
-#X obj 228 99 s \$0-knobparent;
+#X obj 155 150 t a;
+#X obj 154 200 namecanvas \$0-knobparent;
+#X obj 154 174 s \$0-knobparent;
+#X obj 181 41 declare -lib clearessentials;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 1 0;

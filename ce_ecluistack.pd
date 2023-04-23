@@ -1,4 +1,5 @@
 #N canvas 18 19 1920 997 12;
+#X declare -lib clearessentials;
 #X obj 100 100 cnv 15 525 60 empty empty empty 3 10 0 14 #606060 #000000
 0;
 #X obj 603 125 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -10,7 +11,7 @@
 empty 0 -8 0 10 #fcfcfc #000000 #000000 0 256;
 #X obj 100 100 cnv 15 39 22 empty empty empty 5 9 0 14 #202020 #00f8fc
 0;
-#X obj 102 103 cnv 15 34 17 \$0-freqnum-send \$0-freqnum-recv 7 5 9
+#X obj 102 103 cnv 15 34 17 \$0-freqnum-send \$0-freqnum-recv 1 5 9
 0 14 #101054 #00f8fc 0;
 #X obj 62 169 outlet;
 #X obj 69 28 inlet;
@@ -89,7 +90,7 @@ empty 0 -8 0 10 #fcfcfc #000000 #000000 0 256;
 empty 0 -8 0 10 #fcfcfc #000000 #000000 0 256;
 #X obj 100 100 cnv 15 39 22 empty empty empty 5 9 0 14 #202020 #00f8fc
 0;
-#X obj 102 103 cnv 15 34 17 \$0-shiftnum-send \$0-shiftnum-recv 8 5
+#X obj 102 103 cnv 15 34 17 \$0-shiftnum-send \$0-shiftnum-recv 5 5
 9 0 14 #101054 #00f8fc 0;
 #X obj 62 169 outlet;
 #X obj 69 28 inlet;
@@ -451,7 +452,7 @@ empty 0 -8 0 10 #fcfcfc #000000 #000000 0 256;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-steptoggle-send \$0-steptoggle-recv
-empty 20 12 0 14 #bcbcbc #404040 0;
+empty 20 12 0 14 #fcfcfc #404040 0;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
 #X obj 100 206 spigot 0;
@@ -619,7 +620,7 @@ empty 20 12 0 14 #bcbcbc #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-autoveltoggle-send \$0-autoveltoggle-recv
-empty 20 12 0 14 #bcbcbc #404040 0;
+empty 20 12 0 14 #fcfcfc #404040 0;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
 #X obj 100 206 spigot 0;
@@ -789,7 +790,7 @@ empty 20 12 0 14 #bcbcbc #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-notedurtoggle-send \$0-notedurtoggle-recv
-empty 20 12 0 14 #bcbcbc #404040 0;
+empty 20 12 0 14 #fcfcfc #404040 0;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
 #X obj 100 206 spigot 0;
@@ -1401,7 +1402,7 @@ max:12 3 8 0 10 #606060 #00faff #ffffff 0 1;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-rndbeatstoggle-send \$0-rndbeatstoggle-recv
-empty 20 12 0 14 #bcbcbc #404040 0;
+empty 20 12 0 14 #fcfcfc #404040 0;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
 #X obj 100 206 spigot 0;
@@ -1567,7 +1568,7 @@ empty 20 12 0 14 #bcbcbc #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-rndbyshifttoggle-send \$0-rndbyshifttoggle-recv
-empty 20 12 0 14 #bcbcbc #404040 0;
+empty 20 12 0 14 #fcfcfc #404040 0;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
 #X obj 100 206 spigot 0;
@@ -1733,7 +1734,7 @@ empty 20 12 0 14 #bcbcbc #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-rndnextnotetoggle-send \$0-rndnextnotetoggle-recv
-empty 20 12 0 14 #bcbcbc #404040 0;
+empty 20 12 0 14 #fcfcfc #404040 0;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
 #X obj 100 206 spigot 0;
@@ -1899,7 +1900,7 @@ empty 20 12 0 14 #bcbcbc #404040 0;
 #X obj 100 100 cnv 16 16 16 empty empty empty 20 12 0 14 #202020 #404040
 0;
 #X obj 103 103 cnv 10 10 10 \$0-rndnextocttoggle-send \$0-rndnextocttoggle-recv
-empty 20 12 0 14 #bcbcbc #404040 0;
+empty 20 12 0 14 #fcfcfc #404040 0;
 #X obj 171 442 f;
 #X obj 171 420 t b f;
 #X obj 100 206 spigot 0;
@@ -3057,6 +3058,7 @@ f f f;
 #X connect 8 0 3 0;
 #X restore 948 333 pd \$0-indexcheck;
 #X obj 948 309 t a a;
+#X obj 242 -295 declare -lib clearessentials;
 #X connect 1 0 55 0;
 #X connect 2 0 57 0;
 #X connect 3 0 47 0;

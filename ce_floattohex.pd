@@ -1,4 +1,5 @@
 #N canvas -33 55 1280 877 12;
+#X declare -lib clearessentials;
 #X obj 63 133 vsl 15 100 0 10000 0 1 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 17 1;
 #X floatatom 382 216 5 0 0 0 - - - 0;
@@ -1202,6 +1203,7 @@
 #X restore 698 94 pd \$0-calculatedigits;
 #X msg 447 77 set_digitlimit 3;
 #X obj 257 131 route float setmin setmax set_digitlimit;
+#X obj 320 12 declare -lib clearessentials;
 #X connect 0 0 30 0;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;

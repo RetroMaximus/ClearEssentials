@@ -1,4 +1,5 @@
-#N canvas 351 75 1920 997 12;
+#N canvas 630 196 628 469 12;
+#X declare -lib clearessentials;
 #X obj 100 100 cnv 15 290 155 empty empty Filters 3 12 0 14 #404040
 #ffffff 0;
 #X obj 122 844 *~;
@@ -332,6 +333,7 @@ f f f f f f f;
 #X msg 1086 -119 setosctype \$1;
 #X msg 1104 -97 setspeed \$1;
 #X msg 1117 -72 settoggle \$1;
+#X obj 320 12 declare -lib clearessentials;
 #X connect 1 0 14 0;
 #X connect 2 0 36 0;
 #X connect 2 0 94 1;

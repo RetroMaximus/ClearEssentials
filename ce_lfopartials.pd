@@ -1,4 +1,5 @@
-#N canvas 304 15 1920 997 12;
+#N canvas 706 139 608 544 12;
+#X declare -lib clearessentials;
 #X obj 100 100 cnv 15 500 155 empty empty Partials\\\ LFO's 3 12 0
 14 #606060 #ffffff 0;
 #X obj 666 493 outlet;
@@ -313,6 +314,7 @@ f f f f f f f f f f f f f f;
 #X obj 1105 477 outlet;
 #X obj 938 512 t b b b;
 #X obj 915 550 del 200;
+#X obj 186 47 declare -lib clearessentials;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
 #X connect 4 0 7 0;

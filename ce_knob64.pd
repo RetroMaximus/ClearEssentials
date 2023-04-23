@@ -1,7 +1,8 @@
-#N struct 2055-g1 float x float y float q float lw float lc float fc
+#N struct 1212-g1 float x float y float q float lw float lc float fc
 float plc float pc float bgc;
-#N canvas 637 226 292 291 12;
-#N canvas 833 50 1920 997 \$0-ce_knob 1;
+#N canvas 683 307 292 291 12;
+#X declare -lib clearessentials;
+#N canvas 534 135 839 632 \$0-ce_knob 0;
 #X obj 687 158 struct \$0-g1 float x float y float q float lw float
 lc float fc float plc float pc float bgc, f 84;
 #X obj 102 102 vsl 59 59 1 1.5 0 1 empty empty empty 0 -9 0 10 #ffffff
@@ -15,7 +16,7 @@ lc float fc float plc float pc float bgc, f 84;
 #X text 1029 268 fc == fill color;
 #X text 1029 289 lc == line color;
 #N canvas -459 16 1920 997 \$0-innerknob 0;
-#X scalar 2055-g1 1 1 0 0 999 66 0 0 999 \;;
+#X scalar 1212-g1 1 1 0 0 999 233 0 0 999 \;;
 #X coords 0 -1 1 1 64 64 2 64 0;
 #X restore 100 100 pd \$0-innerknob;
 #X obj 15 834 outlet;
@@ -552,8 +553,9 @@ bottom one at a time if changes are made directly to this patch.;
 #X obj 548 223 s \$0-sizevalue;
 #X obj 571 171 del 100;
 #X obj 20 53 iemgui;
-#X obj 101 101 iem_image C:/Users/Retro/Documents/Pd/externals/clearessentials/images/value-5-64.gif
+#X obj 101 101 iem_image C:/Users/Retro/Documents/ClearEssentials/images/value-5-64.gif
 0 0 empty empty;
+#X obj 744 715 outlet;
 #X connect 1 0 17 1;
 #X connect 1 0 98 0;
 #X connect 3 0 85 0;
@@ -650,6 +652,7 @@ bottom one at a time if changes are made directly to this patch.;
 #X connect 86 0 21 0;
 #X connect 87 0 43 0;
 #X connect 88 0 46 0;
+#X connect 88 0 146 0;
 #X connect 89 0 90 0;
 #X connect 90 0 96 0;
 #X connect 91 0 92 0;
@@ -739,7 +742,13 @@ bottom one at a time if changes are made directly to this patch.;
 #X obj 100 174 outlet;
 #X obj 100 44 inlet;
 #X obj 100 70 t a;
+#X obj 30 9 declare -lib clearessentials;
+#X obj 196 191 namecanvas \$0-knobparent;
+#X obj 201 139 t a;
+#X obj 200 163 s \$0-knobparent;
 #X connect 0 0 1 0;
+#X connect 0 1 6 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
+#X connect 6 0 7 0;
 #X coords 0 -1 1 1 64 64 2 100 100;

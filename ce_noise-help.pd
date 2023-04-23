@@ -1,4 +1,5 @@
 #N canvas 182 182 484 449 12;
+#X declare -path clearessentials;
 #X text 28 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
@@ -10,6 +11,8 @@
 #X text 129 239 Signal;
 #X text 93 318 0 - Delayed Signal;
 #X obj 281 146 ce_noise;
-#X text 203 12 [ce_noise] is a small effect.;
+#X text 235 9 [ce_noise] is a small effect.;
 #X text 26 85 2022/08/08 7:50 PM;
 #X text 26 27 ce_noise v1.0;
+#X obj 14 6 declare -path clearessentials;
+#X obj 27 176 watchtutorial;

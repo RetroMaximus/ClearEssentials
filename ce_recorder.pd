@@ -1,4 +1,0 @@
-#N canvas 234 234 450 300 12;
-#X obj 100 100 cnv 15 500 130 empty empty Recorder 3 12 0 14 #606060
-#ffffff 0;
-#X coords 0 -1 1 1 500 130 2 100 100;

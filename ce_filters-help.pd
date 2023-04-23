@@ -1,4 +1,5 @@
 #N canvas 395 117 697 563 12;
+#X declare -path clearessentials;
 #X text 27 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
@@ -21,11 +22,13 @@
 #X msg 381 270 setwidth 9;
 #X msg 547 142 get_band;
 #X msg 380 243 sethipass 0.01;
-#X text 194 12 ce_filters 7 filters used to modify the signal inlet
+#X text 239 2 ce_filters 7 filters used to modify the signal inlet
 for the osc voice.;
 #X text 10 320 Outlet(s);
 #X text 93 319 0 - Left audio signal;
 #X text 94 340 1 - Right audio signal;
+#X obj 27 5 declare -path clearessentials;
+#X obj 31 169 watchtutorial;
 #X connect 8 0 7 0;
 #X connect 9 0 7 0;
 #X connect 10 0 7 0;

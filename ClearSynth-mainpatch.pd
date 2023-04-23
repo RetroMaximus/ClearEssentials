@@ -1,13 +1,14 @@
-#N struct 2410-wavegrapharray float x float x-space float color array
-graph 2410-waveoscgraph;
-#N struct 2410-waveoscgraph float y;
-#N struct 2461-adsrenvarray float x float x-space float color array
-graph 2461-adsrgraph;
-#N struct 2461-adsrgraph float y;
-#N struct 2484-grapharray float x float x-space float color array graph
-2484-oscgraph;
-#N struct 2484-oscgraph float y;
+#N struct 2091-wavegrapharray float x float x-space float color array
+graph 2091-waveoscgraph;
+#N struct 2091-waveoscgraph float y;
+#N struct 2138-adsrenvarray float x float x-space float color array
+graph 2138-adsrgraph;
+#N struct 2138-adsrgraph float y;
+#N struct 2161-grapharray float x float x-space float color array graph
+2161-oscgraph;
+#N struct 2161-oscgraph float y;
 #N canvas 512 27 1099 881 12;
+#X declare -path clearessentials;
 #N canvas 534 36 1168 856 \$0-clearsynth 0;
 #X obj 100 100 cnv 15 500 768 empty empty empty 20 12 0 14 #404040
 #404040 0;
@@ -182,6 +183,7 @@ graph 2461-adsrgraph;
 #X obj 4 -55 inlet;
 #X msg -1 -26 inputmidi \$1 \$2;
 #X text 335 -25 window name assigned below here;
+#X obj 74 -53 declare -path clearessentials;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X coords 0 -1 1 1 1024 768 2 0 0;

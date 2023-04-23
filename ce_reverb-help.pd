@@ -1,4 +1,5 @@
 #N canvas 182 182 484 449 12;
+#X declare -path clearessentials;
 #X text 28 46 Written By: Reg Finley;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
@@ -10,6 +11,8 @@
 #X text 129 239 Signal;
 #X text 93 318 0 - Delayed Signal;
 #X text 26 27 ce_reverb v1.0;
-#X text 203 12 [ce_reverb] is a small effect.;
+#X text 227 6 [ce_reverb] is a small effect.;
 #X text 26 85 2022/08/09 7:50 PM;
 #X obj 303 174 ce_reverb;
+#X obj 14 6 declare -path clearessentials;
+#X obj 28 173 watchtutorial;

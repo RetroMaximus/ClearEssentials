@@ -1,0 +1,4 @@
+Home;
+Settings;
+Help;
+About;

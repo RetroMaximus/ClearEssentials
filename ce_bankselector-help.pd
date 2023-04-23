@@ -1,4 +1,5 @@
 #N canvas 614 119 762 538 12;
+#X declare -path clearessentials;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
 #X obj 28 152 reportissue;
@@ -21,12 +22,14 @@
 #X text 93 429 0~ - Bank Letter;
 #X text 94 450 1 - Bank Value;
 #X text 94 470 2~ - Selected item;
-#X text 201 17 [ce_bankselector] is a small external that outlets a
+#X text 228 6 [ce_bankselector] is a small external that outlets a
 selected index based on the chosen bank multiplied by total items per
 bank.;
 #X text 26 27 ce_bankselector v1.0;
 #X text 26 85 2022/07/17 5:11PM;
 #X text 27 46 Written By: Reg Finley;
+#X obj 14 6 declare -path clearessentials;
+#X obj 28 173 watchtutorial;
 #X connect 7 0 10 0;
 #X connect 7 1 11 0;
 #X connect 7 2 9 0;

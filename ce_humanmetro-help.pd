@@ -1,0 +1,181 @@
+#N canvas 225 56 1170 901 12;
+#X declare -path clearessentials;
+#X msg 379 405 stop;
+#X msg 379 346 start;
+#X floatatom 457 668 5 0 0 0 Live_Tick - - 0;
+#X floatatom 627 206 5 0 1 0 - - - 0;
+#X obj 627 229 t f;
+#X floatatom 754 205 5 0 1 0 - - - 0;
+#X obj 754 228 t f;
+#X floatatom 356 163 5 0 0 0 - - - 0;
+#X obj 356 187 t f;
+#X floatatom 881 206 5 0 1 0 - - - 0;
+#X obj 881 230 t f;
+#X msg 627 254 set_swing \$1;
+#X msg 754 254 set_human \$1;
+#X msg 881 255 set_mistakes \$1;
+#X msg 356 215 set_bpm \$1;
+#X floatatom 436 643 5 0 0 0 Live_Step - - 0;
+#X floatatom 407 618 5 0 0 0 Live_Bar - - 0;
+#X floatatom 507 717 5 0 0 0 Got_Information - - 0;
+#X msg 473 182 set_timediv \$1;
+#X obj 473 161 hradio 15 1 0 6 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
+#X msg 232 208 get_timediv;
+#X msg 232 234 get_bpm;
+#X msg 231 258 get_swing;
+#X msg 232 282 get_human;
+#X msg 231 304 get_mistakes;
+#X obj 373 596 bng 15 250 50 0 empty empty Live_Banged_Step 17 7 0
+10 #fcfcfc #000000 #000000;
+#X msg 216 117 get_bar;
+#X msg 223 141 get_step;
+#X msg 230 165 get_tick;
+#X obj 30 201 loadbang;
+#X text 28 64 Written By: Reg Finley;
+#X text 27 85 Aka Scr1ptAl1as;
+#X text 642 120 Swing \, Human and Mistakes is set from 0.01 to 1,
+f 48;
+#X obj 630 185 hsl 100 15 0.01 1 1 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 767 184 hsl 100 15 0.01 1 1 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 894 186 hsl 100 15 0.01 1 1 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 356 138 r s0-defaultbpm;
+#X obj 881 141 r s0-defaultmistakes;
+#X obj 754 141 r s0-defaulthuman;
+#X obj 627 141 r s0-defaultswing;
+#X obj 473 136 r s0-defaultdivision;
+#N canvas 182 182 1920 997 \$0-loadmetrodefaults 0;
+#X obj 95 43 inlet;
+#X msg 76 227 4;
+#X obj 112 227 s s0-defaultbpm;
+#X msg 112 201 84;
+#X msg 145 172 0.02;
+#X msg 180 146 0.01;
+#X msg 219 127 0.015;
+#X obj 145 202 s s0-defaultswing;
+#X obj 184 174 s s0-defaulthuman;
+#X obj 219 151 s s0-defaultmistakes;
+#X obj 79 256 s s0-defaultdivision;
+#X obj 267 125 s s0-defaultqres;
+#X obj 91 73 t b b b b b b;
+#X msg 267 96 2;
+#X connect 0 0 12 0;
+#X connect 1 0 10 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 8 0;
+#X connect 6 0 9 0;
+#X connect 12 0 1 0;
+#X connect 12 1 3 0;
+#X connect 12 2 4 0;
+#X connect 12 3 5 0;
+#X connect 12 4 6 0;
+#X connect 12 5 13 0;
+#X connect 13 0 11 0;
+#X restore 30 228 pd \$0-loadmetrodefaults;
+#X text 27 103 2022/05/11 8:54AM;
+#X text 763 166 Pro;
+#X text 824 166 Newbie;
+#X text 890 165 Less;
+#X text 964 166 More;
+#X text 660 1 Note* When using get_bar \, get_step and get_tick these
+messages will work only when the metronome is playing. Others will
+work as soon as the message is sent.;
+#X msg 379 376 continue;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X msg 485 228 set_totalsteps 16;
+#X msg 773 396 set_qres \$1;
+#X obj 775 376 hsl 100 15 1.5 5 1 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 704 324 Max quantize resolution set from 1.5 to 5;
+#X obj 773 349 r s0-defaultqres;
+#X msg 772 429 quantizebang;
+#X floatatom 653 847 5 0 0 0 Quantized_Steps - - 0;
+#X floatatom 631 819 5 0 0 0 Total_Metro_Steps - - 0;
+#X floatatom 586 793 5 0 0 0 Tick_Length - - 0;
+#X listbox 617 757 20 0 0 0 - - - 0;
+#X obj 550 734 unpack f s;
+#X floatatom 550 759 5 0 0 0 Time_Division - - 0;
+#X floatatom 484 691 5 0 0 0 Metro_State - - 0;
+#X msg 232 328 get_totalsteps;
+#X msg 232 350 get_tickvol;
+#X msg 1010 255 set_tickvol \$1;
+#X obj 1011 235 hsl 100 15 0.01 1 1 0 empty empty empty -2 -8 0 10
+#fcfcfc #000000 #000000 0 1;
+#X msg 231 374 get_qres;
+#X text 735 450 When this mesage is used a tick length messurment is
+interupted to check if the resolution divided by the tick length is
+less then the normally calculated tick length then if true a correction
+is made to the last outlet.;
+#X text 733 512 the last outlet should be use when writting to a text
+file for example when live quantizing is needed.;
+#X text 735 557 Use the third outlet in all other cases when needing
+the current metronome step.;
+#X text 27 45 ce_metro v1.0;
+#X text 238 -1 ce_metro is a robust metronome that utilizes a probibility
+threshold for the likleyhood of mistakes to occure while playing the
+metronome. These thresholds are used to calculate possible random mistakes
+within the swing/groove.;
+#X obj 479 343 ce_humanmetro, f 38;
+#X obj 27 5 declare -path clearessentials;
+#X obj 28 174 watchtutorial;
+#X connect 0 0 74 0;
+#X connect 1 0 74 0;
+#X connect 3 0 4 0;
+#X connect 4 0 11 0;
+#X connect 5 0 6 0;
+#X connect 6 0 12 0;
+#X connect 7 0 8 0;
+#X connect 8 0 14 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 11 0 74 0;
+#X connect 12 0 74 0;
+#X connect 13 0 74 0;
+#X connect 14 0 74 0;
+#X connect 18 0 74 0;
+#X connect 19 0 18 0;
+#X connect 20 0 74 0;
+#X connect 21 0 74 0;
+#X connect 22 0 74 0;
+#X connect 23 0 74 0;
+#X connect 24 0 74 0;
+#X connect 26 0 74 0;
+#X connect 27 0 74 0;
+#X connect 28 0 74 0;
+#X connect 29 0 41 0;
+#X connect 33 0 3 0;
+#X connect 34 0 5 0;
+#X connect 35 0 9 0;
+#X connect 36 0 7 0;
+#X connect 37 0 35 0;
+#X connect 38 0 34 0;
+#X connect 39 0 33 0;
+#X connect 40 0 19 0;
+#X connect 48 0 74 0;
+#X connect 51 0 74 0;
+#X connect 52 0 74 0;
+#X connect 53 0 52 0;
+#X connect 55 0 53 0;
+#X connect 56 0 74 0;
+#X connect 61 0 62 0;
+#X connect 61 1 60 0;
+#X connect 64 0 74 0;
+#X connect 65 0 74 0;
+#X connect 66 0 74 0;
+#X connect 67 0 66 0;
+#X connect 68 0 74 0;
+#X connect 74 0 25 0;
+#X connect 74 1 16 0;
+#X connect 74 2 15 0;
+#X connect 74 3 2 0;
+#X connect 74 4 63 0;
+#X connect 74 5 17 0;
+#X connect 74 6 61 0;
+#X connect 74 7 59 0;
+#X connect 74 8 58 0;
+#X connect 74 9 57 0;

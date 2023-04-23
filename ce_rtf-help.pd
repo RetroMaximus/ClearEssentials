@@ -1,0 +1,48 @@
+#N canvas 381 164 1208 520 12;
+#X obj 464 221 ce_rtf;
+#X text 673 331 Tha = (Mids) Fuzz;
+#X text 673 354 Filter - (Background) Atmosphear;
+#X text 673 309 Rec = (Highend) Pops;
+#X obj 656 196 noise~;
+#X obj 462 398 dac~;
+#X text 26 67 Aka Scr1ptAl1as;
+#X text 28 106 Pd 0.52.2;
+#X obj 28 152 reportissue;
+#X obj 28 132 aboutexternal;
+#X text 112 201 0;
+#X text 33 201 Inlet(s);
+#X text 27 46 Written By: Reg Finley;
+#X msg 132 203 bang;
+#X msg 134 395 set_defaultspeedsize;
+#X msg 133 371 set_defaultsr;
+#X msg 135 347 set_lfotoggle;
+#X msg 134 323 set_intdendefaults;
+#X msg 134 297 set_atmosdefaults;
+#X msg 133 273 set_popdefaults;
+#X msg 130 250 set_fuzzdefaults;
+#X msg 130 227 stop;
+#X text 113 425 1;
+#X text 111 457 0;
+#X text 32 457 outlet(s);
+#X text 26 27 ce_rtf v1.0;
+#X text 127 426 [noise] or any audio signal;
+#X text 129 458 Audio Signal;
+#X text 289 111 The crsuh slider will adjust the atmosphear from 1-16
+bits. This will give the atmosphear some texture.;
+#X text 734 29 Speed is measured in RPM's 33 \, 45 and 78;
+#X text 736 7 Record sizes are as follows 7 \, 10 and 12;
+#X text 288 4 ce_rtf is used with [noise] to create vynl record effects.
+Sample rate can be specified with ease. Choosing the record size and
+play speed will give the atmosphear a wobble effect if the LFO toggle
+is selected for the Band Filter. When the toggle is enabled the marker
+wil be visibly moving. If the LFO toggle is unselected the band filter
+will hold the slider setting.;
+#X text 735 52 Using the Desnity will result in longer chunks of pops
+with increased fuzz.;
+#X text 734 90 The Instesity slider controls how "hard" the fuzz sounds.
+This also has an effect on "pops" but can be managed by using the mix
+slider of each.;
+#X text 26 85 2022/11/25 12:00 AM;
+#X connect 0 0 5 1;
+#X connect 0 0 5 0;
+#X connect 4 0 0 1;

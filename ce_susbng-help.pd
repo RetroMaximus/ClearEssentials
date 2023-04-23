@@ -1,4 +1,5 @@
 #N canvas 423 66 1226 828 12;
+#X declare -path clearessentials;
 #X obj 676 607 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 702 444 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -13,9 +14,9 @@
 #X text 43 49 Written By: Reg Finley;
 #X text 41 30 ce_susbng v1.0;
 #X text 41 88 2022/12/09 2:18 AM;
-#X text 656 12 In this example the toggle state is checked every 500
+#X text 671 3 In this example the toggle state is checked every 500
 miliseconds which is half of a second.;
-#X text 222 11 [ce_susbng] is a small external that acts as a alternative
+#X text 237 2 [ce_susbng] is a small external that acts as a alternative
 to using [del]. Unlike [del] ce_susbng does not hold up the cpu in
 any way. ce_susbng uses a metronome to count the amount of milliseconds
 that pass which is the reason for the first inlet being a float and
@@ -31,7 +32,6 @@ visualization;
 #X msg 701 467 set_state \$1;
 #X msg 627 482 bang;
 #X text 227 243 << by milliseconds suspend time;
-#X msg 133 265 size 32;
 #X msg 133 243 set_wait 500;
 #X text 107 267 0;
 #X text 107 289 0;
@@ -47,10 +47,10 @@ visualization;
 #X msg 133 313 set_continuous 0;
 #X msg 258 312 set_continuous 1;
 #X text 106 316 0;
-#X text 236 133 Using [set_continuous 1< will repeatedly send a 1 float
+#X text 251 124 Using [set_continuous 1< will repeatedly send a 1 float
 to the second outlet until the state changes. Otherwise the suspended
 state will only be appear once.;
-#X text 236 184 More about this in the example;
+#X text 251 175 More about this in the example;
 #X text 109 440 0 - bang - after first bang we are suspended.;
 #X text 109 460 0 - bang - after second bang state has changed and
 ;
@@ -82,11 +82,11 @@ state will only be appear once.;
 #X restore 780 499 pd \$0-loaddefaultsettings;
 #X text 783 521 You use these settings as a template otherwise default
 creation settings are applied.;
-#X text 659 51 All vanilla settings messages can be sent to the first
+#X text 674 42 All vanilla settings messages can be sent to the first
 inlet except for the default [size< message. The object bounds will
 not be set correctly. Use the size message described below.;
-#X text 743 160 [ce_susbng 1] or [ce_susbng 2];
-#X text 662 123 If more then one ce_susbng object is required create
+#X text 758 151 [ce_susbng 1] or [ce_susbng 2];
+#X text 677 114 If more then one ce_susbng object is required create
 the object in this manner. Note* this help file starts at 0;
 #X msg 692 295 set_timeout 10000;
 #X msg 704 341 use_timeout \$1;
@@ -101,20 +101,8 @@ to 0 This value is 10 seconds.;
 #X text 104 355 0;
 #X msg 132 359 use_timeout 0;
 #X msg 240 359 use_timeout 1;
-#X obj 37 204 watchtutorial;
-#N canvas 78 78 731 300 \$0-loadtutorial-link 0;
-#X obj 48 162 outlet;
-#X obj 47 84 loadbang;
-#X msg 47 132 symbol https://www.youtube.com/channel/UCfmCjMoyl6K0pntwaSy0-kg
-, f 65;
-#X obj 46 109 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X connect 1 0 3 0;
-#X connect 2 0 0 0;
-#X connect 3 0 2 0;
-#X restore 37 178 pd \$0-loadtutorial-link;
 #X text 748 564 <<< Current suspend state;
-#X text 229 98 Up or "released" state is suspended until the toggle
+#X text 244 89 Up or "released" state is suspended until the toggle
 box is true or = 1;
 #X obj 675 497 ce_susbng 0;
 #X text 104 407 0;
@@ -534,19 +522,21 @@ flash randomly until it's completion.;
 ;
 #X text 32 698 Change color of [ce_susbang] while a sound plays using
 [soundfiler] to update a canvas with the suspend status.;
+#X msg 133 265 set_size 32;
+#X obj 27 5 declare -path clearessentials;
+#X obj 41 175 watchtutorial;
 #X connect 1 0 21 0;
-#X connect 20 0 69 0;
-#X connect 21 0 69 0;
-#X connect 22 0 69 0;
-#X connect 31 0 69 0;
-#X connect 32 0 69 0;
-#X connect 36 0 47 0;
-#X connect 45 0 69 0;
-#X connect 46 0 45 0;
-#X connect 49 0 69 0;
-#X connect 54 0 69 0;
-#X connect 55 0 69 0;
-#X connect 56 0 55 0;
-#X connect 66 0 65 0;
-#X connect 69 0 0 0;
-#X connect 69 1 36 0;
+#X connect 20 0 66 0;
+#X connect 21 0 66 0;
+#X connect 22 0 66 0;
+#X connect 30 0 66 0;
+#X connect 31 0 66 0;
+#X connect 35 0 46 0;
+#X connect 44 0 66 0;
+#X connect 45 0 44 0;
+#X connect 48 0 66 0;
+#X connect 53 0 66 0;
+#X connect 54 0 66 0;
+#X connect 55 0 54 0;
+#X connect 66 0 0 0;
+#X connect 66 1 35 0;

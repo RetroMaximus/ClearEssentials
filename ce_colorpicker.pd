@@ -1,4 +1,5 @@
-#N canvas 1124 262 599 406 12;
+#N canvas 721 179 599 406 12;
+#X declare -lib clearessentials;
 #X obj 100 100 bng 10 250 50 0 empty empty empty 17 7 0 10 #dcdcdc
 #000000 #000000;
 #X obj 111 100 bng 10 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -37,7 +38,7 @@ empty 20 12 0 14 #b8b8b8 #404040 0;
 #000000 0;
 #X floatatom 154 52 5 0 0 0 - - - 0;
 #X obj 153 75 route 0 1 2 3 4 5 6 7;
-#N canvas 149 136 970 515 \$0-colormsgs 1;
+#N canvas 149 136 970 515 \$0-colormsgs 0;
 #X obj 213 76 inlet;
 #X obj 276 77 inlet;
 #X obj 343 81 inlet;
@@ -292,6 +293,7 @@ empty 20 12 0 14 #b8b8b8 #404040 0;
 #X obj 352 198 sel 0 1 2 3 4 5 6 7;
 #X floatatom 485 228 5 0 0 0 - - - 0;
 #X floatatom 393 245 5 0 0 0 - - - 0;
+#X obj 320 12 declare -lib clearessentials;
 #X connect 0 0 20 0;
 #X connect 1 0 20 1;
 #X connect 2 0 20 2;

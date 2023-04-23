@@ -1,20 +1,21 @@
-#N struct 1049-wavegrapharray float x float x-space float color array
-graph 1049-waveoscgraph;
-#N struct 1049-waveoscgraph float y;
+#N struct 1525-wavegrapharray float x float x-space float color array
+graph 1525-waveoscgraph;
+#N struct 1525-waveoscgraph float y;
 #N canvas 426 200 1106 556 12;
+#X declare -path clearessentials;
 #X text 26 67 Aka Scr1ptAl1as;
 #X text 28 106 Pd 0.52.2;
 #X obj 28 152 reportissue;
 #X obj 28 132 aboutexternal;
 #X text 26 27 ce_customarray v1.0;
 #X text 26 85 2022/06/21 835AM;
-#X text 201 17 ce_customarray features 12 partials sliders to modify
+#X text 231 8 ce_customarray features 12 partials sliders to modify
 harmonics of the osc voice. Presets can be saved and quickly referenced
 with other objects such as [lfopresets].;
 #X obj 453 301 ce_customarray;
-#X text 634 33 Note* Enable midi to frequency only if this is your
-starting point. [setmidinote< and [setfreq< messages can be used to
-trigger notes even if this toggle is not enabled.;
+#X text 664 7 Note* Enable midi to frequency only if this is your starting
+point. [setmidinote< and [setfreq< messages can be used to trigger
+notes even if this toggle is not enabled.;
 #X msg 480 270 setslidervalue 0 1;
 #X msg 204 112 setoutlevel 0.8;
 #X msg 223 133 get_outlevel;
@@ -36,6 +37,8 @@ trigger notes even if this toggle is not enabled.;
 #X obj 441 444 dac~;
 #X obj 817 459 print inputmidi_message;
 #X text 27 46 Written By: Reg Finley;
+#X obj 14 6 declare -path clearessentials;
+#X obj 28 173 watchtutorial;
 #X connect 7 0 27 1;
 #X connect 7 0 27 0;
 #X connect 7 3 28 0;

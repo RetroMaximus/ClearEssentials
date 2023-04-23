@@ -1,4 +1,5 @@
 #N canvas 24 107 1920 997 12;
+#X declare -lib clearessentials;
 #X obj 108 -376 inlet;
 #N canvas 320 41 753 997 \$0-\$1-susbng 0;
 #X floatatom 253 139 4 0 0 0 - - - 0;
@@ -256,6 +257,7 @@ set_timeout use_timeout, f 68;
 #X obj 623 -233 s \$0-usetimeout;
 #X obj 252 -294 t b b b b;
 #X msg 482 -172 10000;
+#X obj 351 -378 declare -lib clearessentials;
 #X connect 0 0 40 0;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
