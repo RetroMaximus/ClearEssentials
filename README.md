@@ -7,7 +7,7 @@ for the Pure Data programming language
 
 Version: 1.0.7
 
-Copyright © 2022 Reg Finley
+Copyright © 2023 Reg Finley
 This work is free. You can redistribute it and/or modify it under the terms of the The UnLicense, See https://github.com/RetroMaximus/ClearEssentials/blob/main/LICENSE for more details.
 
 Other licenses may apply for specific objects.
