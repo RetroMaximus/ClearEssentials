@@ -28,8 +28,8 @@ Install CE:
 ​ 
 Copy the contents of this library to pd/externals/clearessentials
 
-Note* Some external libraries are required and commonly found inside Clear Essential objects.
-Recommended to insatll these libraries listed below before using the Clear esentials library.
+Note* Some external libraries are required and commonly found inside CE objects.
+Recommended to install these libraries listed below before using the CE type objects.
 
 - iem-lib
 - else
