@@ -28,6 +28,15 @@ Install CE:
 ​ 
 Copy the contents of this library to pd/externals/clearessentials
 
+Note* Some external libraries are required and commonly found inside Clear Essential objects.
+Recommended to insatll these libraries listed below before using the Clear esentials library.
+
+- iem-lib
+- else
+- zexy
+- hcs
+- list-abs
+
 About CE
 
 CE is a collection of patches written by Reg Finley. These are not ment to re-invent the wheel
