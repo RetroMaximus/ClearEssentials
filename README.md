@@ -13,7 +13,7 @@ This work is free. You can redistribute it and/or modify it under the terms of t
 Other licenses may apply for specific objects.
 
 About Clear Essentials
-This version of Clear Essentials needs Pd 0.52-1 or above.
+This version of Clear Essentials needs Pd 0.54.0 or above.
 
 CE is a small library of externals that extends the performance Pure Data (Pd) - Miller S. Puckette's realtime computer music environment (download Pd from: http://msp.ucsd.edu/software.html).
 
