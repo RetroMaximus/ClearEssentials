@@ -56,7 +56,7 @@
 #X text 341 295 The third outlet is not needed for bitwise operators and will return a -1 float.;
 #X text 245 21 This patch can be a bit redundant but can serve a purpose when multipule comparrisons need to be checked with minimal code.;
 #X text 339 333 ce_trickle provides the same functionality as all of this code below. Note* the end values are not the result of the binary operator but the corresponding values based on the floats provided. With the exception of bitwise operators as described above.;
-#X text 35 93 2022/08/06 3:16 PM;
+#X text 35 93 2023/08/06 3:16 PM;
 #X connect 7 0 46 0;
 #X connect 14 0 46 1;
 #X connect 15 0 46 2;
