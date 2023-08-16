@@ -29,7 +29,7 @@
 #X obj 437 95 t b;
 #X text 248 2 [ce_dblclick Is a very simple tool to be combined with [bng] objects or instances when double click functionality is needed.;
 #X text 35 37 ce_dblclick v1.0;
-#X text 35 93 2022/07/27 2:31 PM;
+#X text 35 93 2023/07/27 2:31 PM;
 #X msg 438 119 700;
 #X connect 17 0 19 0;
 #X connect 17 1 20 0;
