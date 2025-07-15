@@ -37,7 +37,7 @@ Recommended to install these libraries listed below before using the CE type obj
 - hcs
 - list-abs
 
-Metronome.wav by Druminfected -- https://freesound.org/s/250552/ -- License: Creative Commons 0
+metrotick.wav by Druminfected -- https://freesound.org/s/250552/ -- License: Creative Commons 0
 
 About CE
 
