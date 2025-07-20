@@ -1,0 +1,37 @@
+#N struct 1154-gasparray float x-space float color float edit array
+graph 1154-gaspgraph;
+#N struct 1154-gaspgraph float y float edit;
+#N struct 1368-gasparray float x-space float color float edit array
+graph 1368-gaspgraph;
+#N struct 1368-gaspgraph float y float edit;
+#N struct 1385-gasparray float x-space float color float edit array
+graph 1385-gaspgraph;
+#N struct 1385-gaspgraph float y float edit;
+#N canvas 608 72 1136 876 12;
+#X obj 90 86 ce_gasp 0;
+#X msg 59 18 set_osc 0 2;
+#X obj 94 42 hsl 790 20 0 100 0 0 empty empty empty -2 -8 0 10 #404040
+#00faff #ffffff 0 1;
+#X msg 41 45 50;
+#X obj 93 67 hsl 390 15 0 100 0 0 empty empty empty -2 -8 0 10 #404040
+#00faff #ffffff 0 1;
+#X obj 494 67 hsl 390 15 0 100 0 0 empty empty empty -2 -8 0 10 #404040
+#00faff #ffffff 0 1;
+#X floatatom 615 454 5 0 0 0 - - - 0;
+#X floatatom 873 460 5 0 0 0 - - - 0;
+#X floatatom 440 435 5 0 0 0 - - - 0;
+#X floatatom 287 466 5 0 0 0 - - - 0;
+#X obj 290 86 ce_gasp 1;
+#X obj 491 86 ce_gasp 2;
+#X obj 691 86 ce_gasp 3;
+#X connect 0 0 10 0;
+#X connect 0 1 9 0;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 10 0 11 0;
+#X connect 10 1 8 0;
+#X connect 11 0 12 0;
+#X connect 11 1 6 0;
+#X connect 12 1 7 0;
